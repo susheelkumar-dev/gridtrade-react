@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "app": "gridtrade",
+  "module": {
+    "id": "gridtrade.reference",
+    "version": "1.0.0",
+    "title": "Reference Data (React)",
+    "owner": "GridTrade"
+  },
+  "displays": [
+    {
+      "id": "reference.counterparties",
+      "title": "Counterparties",
+      "type": "summary",
+      "key": "CounterpartySummary",
+      "route": "reference/counterparties",
+      "icon": "x-fa fa-building",
+      "requiredPermissions": [
+        "reference.view"
+      ],
+      "actionPermissions": {
+        "create": "reference.edit",
+        "update": "reference.edit",
+        "delete": "reference.delete"
+      },
+      "config": {
+        "screenKey": "counterparties"
+      }
+    },
+    {
+      "id": "reference.counterparty",
+      "title": "Counterparty",
+      "type": "entry-form",
+      "key": "CounterpartyEntry",
+      "route": "reference/counterparty",
+      "icon": "x-fa fa-building",
+      "params": [
+        {
+          "name": "id",
+          "required": true,
+          "description": "counterparty id, or 'new'"
+        }
+      ],
+      "requiredPermissions": [
+        "reference.view"
+      ],
+      "actionPermissions": {
+        "create": "reference.edit",
+        "update": "reference.edit"
+      }
+    }
+  ],
+  "menus": [
+    {
+      "id": "reference.counterparties",
+      "title": "Counterparties",
+      "parent": "reference",
+      "display": "reference.counterparties",
+      "icon": "x-fa fa-building",
+      "sortOrder": 10
+    }
+  ]
+}

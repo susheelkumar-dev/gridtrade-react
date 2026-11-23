@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "display",
+  "id": "data.my-test-entry",
+  "name": "MyTestEntry",
+  "title": "My Test Entry",
+  "type": "entry",
+  "module": "data",
+  "route": "data/my-test-entry",
+  "openMode": "tab",
+  "entity": "MyTestEntry",
+  "menu": {
+    "id": "data.my-test-entry",
+    "title": "My Test Entry",
+    "parent": "data",
+    "sortOrder": 100,
+    "params": {
+      "id": "new"
+    },
+    "requiredPermissions": [],
+    "enabled": true
+  },
+  "folders": [],
+  "permissions": {
+    "required": [],
+    "actions": {}
+  },
+  "entry": {
+    "columns": 2,
+    "sections": [
+      {
+        "id": "general",
+        "title": "General",
+        "kind": "panel",
+        "collapsible": false,
+        "collapsed": false,
+        "items": [
+          {
+            "field": "code",
+            "span": 1,
+            "label": "First Name",
+            "placeholder": "Enter First Name"
+          },
+          {
+            "field": "name",
+            "span": 1,
+            "label": "Last Name",
+            "placeholder": "Enter Last Name"
+          },
+          {
+            "field": "text",
+            "span": 1,
+            "label": "Email",
+            "placeholder": "Enter Email"
+          },
+          {
+            "field": "status",
+            "span": 1
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "save",
+        "kind": "save",
+        "label": "Save Test"
+      },
+      {
+        "id": "reset",
+        "kind": "reset"
+      },
+      {
+        "id": "delete",
+        "kind": "delete"
+      },
+      {
+        "id": "cancel",
+        "kind": "cancel",
+        "label": "Close"
+      }
+    ],
+    "copyExclude": [],
+    "summaryDisplay": "data.my-test-entries"
+  },
+  "generator": {
+    "frontend": true,
+    "backend": true,
+    "tests": true
+  },
+  "revision": 3
+}

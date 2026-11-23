@@ -1,0 +1,220 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "entity",
+  "name": "GenerationAsset",
+  "label": "Generation Asset",
+  "plural": "Generation Assets",
+  "module": "assets",
+  "endpoint": "/generation-assets",
+  "idField": "id",
+  "titleField": "name",
+  "fields": [
+    {
+      "name": "code",
+      "label": "Code",
+      "dataType": "string",
+      "multiple": false,
+      "required": true,
+      "unique": true,
+      "maxLength": 10,
+      "pattern": "^[A-Z0-9-]+$",
+      "patternMessage": "Use letters, digits and '-'",
+      "upperCase": true,
+      "readOnly": false,
+      "example": "SOL-001"
+    },
+    {
+      "name": "name",
+      "label": "Name",
+      "dataType": "string",
+      "multiple": false,
+      "required": true,
+      "unique": true,
+      "maxLength": 80,
+      "upperCase": false,
+      "readOnly": false,
+      "example": "Rewa Solar Park"
+    },
+    {
+      "name": "assetType",
+      "label": "Type",
+      "dataType": "enum",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "options": [
+        "Solar",
+        "Wind",
+        "Hydro",
+        "Thermal",
+        "Battery"
+      ],
+      "defaultValue": "Solar",
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "capacityMw",
+      "label": "Capacity (MW)",
+      "dataType": "decimal",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "min": 0.1,
+      "max": 5000.0,
+      "decimals": 2,
+      "upperCase": false,
+      "readOnly": false,
+      "example": 250
+    },
+    {
+      "name": "ownerId",
+      "label": "Owner",
+      "dataType": "lookup",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "lookup": {
+        "endpoint": "/lookups/counterparties",
+        "valueField": "id",
+        "labelField": "name"
+      },
+      "upperCase": false,
+      "readOnly": false,
+      "description": "the counterparty that owns the asset"
+    },
+    {
+      "name": "region",
+      "label": "Region",
+      "dataType": "lookup",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "lookup": {
+        "endpoint": "/lookups/regions",
+        "valueField": "id",
+        "labelField": "name"
+      },
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "commissionedOn",
+      "label": "Commissioned on",
+      "dataType": "date",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "tariffInrMwh",
+      "label": "Tariff (INR/MWh)",
+      "dataType": "currency",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "min": 0.0,
+      "decimals": 2,
+      "currency": "INR",
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "dispatchTags",
+      "label": "Dispatch tags",
+      "dataType": "enum",
+      "multiple": true,
+      "required": false,
+      "unique": false,
+      "options": [
+        "Must-run",
+        "Peaker",
+        "RTC",
+        "Merchant"
+      ],
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "gridConnected",
+      "label": "Grid connected",
+      "dataType": "boolean",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "defaultValue": true,
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "status",
+      "label": "Status",
+      "dataType": "enum",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "options": [
+        "Planned",
+        "Operational",
+        "Retired"
+      ],
+      "defaultValue": "Operational",
+      "upperCase": false,
+      "readOnly": true,
+      "description": "set by the Retire action"
+    },
+    {
+      "name": "notes",
+      "label": "Notes",
+      "dataType": "text",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "maxLength": 1000,
+      "upperCase": false,
+      "readOnly": false
+    }
+  ],
+  "permissions": {
+    "view": "assets.view",
+    "create": "assets.edit",
+    "update": "assets.edit",
+    "delete": "assets.delete"
+  },
+  "permissionModule": {
+    "module": "assets",
+    "label": "Assets",
+    "actions": [
+      "view",
+      "edit",
+      "delete"
+    ],
+    "actionLabels": {},
+    "grants": {
+      "Trader": [
+        "view"
+      ],
+      "Operations": [
+        "view",
+        "edit",
+        "delete"
+      ],
+      "Risk Manager": [
+        "view"
+      ],
+      "Read Only": [
+        "view"
+      ]
+    }
+  },
+  "backend": {
+    "generate": true,
+    "customActions": [
+      "retire"
+    ]
+  },
+  "description": "A generating unit or storage plant whose capacity GridTrade contracts and schedules.",
+  "revision": 1
+}

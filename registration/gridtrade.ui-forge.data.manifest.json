@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "app": "gridtrade",
+  "module": {
+    "id": "gridtrade.ui-forge.data",
+    "version": "1.0.4",
+    "title": "Test (UI Forge)",
+    "owner": "UI Forge"
+  },
+  "displays": [
+    {
+      "id": "data.my-test-entries",
+      "title": "My Test Entries",
+      "type": "summary",
+      "key": "MyTestEntriesSummary",
+      "route": "data/my-test-entries",
+      "requiredPermissions": [
+        "test.view"
+      ],
+      "actionPermissions": {
+        "create": "test.edit",
+        "delete": "test.delete",
+        "update": "test.edit"
+      },
+      "config": {
+        "generatedBy": "ui-forge"
+      }
+    },
+    {
+      "id": "data.my-test-entry",
+      "title": "My Test Entry",
+      "type": "entry-form",
+      "key": "MyTestEntry",
+      "route": "data/my-test-entry",
+      "params": [
+        {
+          "name": "id",
+          "required": true,
+          "description": "record id, or 'new'"
+        }
+      ],
+      "requiredPermissions": [
+        "test.view"
+      ],
+      "actionPermissions": {
+        "create": "test.edit",
+        "delete": "test.delete",
+        "update": "test.edit"
+      },
+      "config": {
+        "generatedBy": "ui-forge"
+      }
+    }
+  ],
+  "menus": [
+    {
+      "id": "data.my-test-entries",
+      "title": "My Test Entries",
+      "parent": "data",
+      "display": "data.my-test-entries",
+      "sortOrder": 90
+    },
+    {
+      "id": "data.my-test-entry",
+      "title": "My Test Entry",
+      "parent": "data",
+      "display": "data.my-test-entry",
+      "sortOrder": 100,
+      "params": {
+        "id": "new"
+      }
+    }
+  ]
+}

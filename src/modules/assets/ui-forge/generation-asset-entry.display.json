@@ -1,0 +1,174 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "display",
+  "id": "assets.generation-asset",
+  "name": "GenerationAssetEntry",
+  "title": "Generation Asset",
+  "type": "entry",
+  "module": "assets",
+  "route": "assets/generation-asset",
+  "icon": "x-fa fa-industry",
+  "openMode": "tab",
+  "entity": "GenerationAsset",
+  "menu": {
+    "id": "assets.new-asset",
+    "title": "New Generation Asset",
+    "parent": "assets",
+    "icon": "x-fa fa-plus",
+    "sortOrder": 20,
+    "params": {
+      "id": "new"
+    },
+    "requiredPermissions": [
+      "assets.edit"
+    ],
+    "enabled": true
+  },
+  "folders": [],
+  "permissions": {
+    "required": [],
+    "actions": {}
+  },
+  "entry": {
+    "columns": 2,
+    "sections": [
+      {
+        "id": "general",
+        "title": "General",
+        "kind": "tab",
+        "collapsible": false,
+        "collapsed": false,
+        "items": [
+          {
+            "field": "code",
+            "span": 1,
+            "placeholder": "e.g. SOL-001",
+            "readOnlyOnEdit": true
+          },
+          {
+            "field": "name",
+            "span": 1
+          },
+          {
+            "field": "assetType",
+            "span": 2,
+            "widget": "radio"
+          },
+          {
+            "field": "ownerId",
+            "span": 1
+          },
+          {
+            "field": "region",
+            "span": 1
+          },
+          {
+            "field": "status",
+            "span": 1
+          }
+        ]
+      },
+      {
+        "id": "technical",
+        "title": "Technical",
+        "kind": "tab",
+        "collapsible": false,
+        "collapsed": false,
+        "items": [
+          {
+            "field": "capacityMw",
+            "span": 1
+          },
+          {
+            "field": "commissionedOn",
+            "span": 1
+          },
+          {
+            "field": "tariffInrMwh",
+            "span": 1
+          },
+          {
+            "field": "gridConnected",
+            "span": 1,
+            "widget": "switch"
+          },
+          {
+            "field": "dispatchTags",
+            "span": 2,
+            "widget": "multiselect",
+            "visibleWhen": {
+              "field": "assetType",
+              "equals": [
+                "Solar",
+                "Wind",
+                "Hydro",
+                "Thermal",
+                "Battery"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "notes",
+        "title": "Notes",
+        "kind": "panel",
+        "collapsible": true,
+        "collapsed": false,
+        "items": [
+          {
+            "field": "notes",
+            "span": 2,
+            "placeholder": "Anything operations should know"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "save",
+        "kind": "save"
+      },
+      {
+        "id": "copy",
+        "kind": "copy"
+      },
+      {
+        "id": "audit",
+        "kind": "audit",
+        "label": "History"
+      },
+      {
+        "id": "retire",
+        "kind": "custom",
+        "label": "Retire",
+        "permission": "update",
+        "confirm": "Retire this asset? It stays in the list as Retired.",
+        "path": "retire"
+      },
+      {
+        "id": "reset",
+        "kind": "reset"
+      },
+      {
+        "id": "delete",
+        "kind": "delete"
+      },
+      {
+        "id": "cancel",
+        "kind": "cancel",
+        "label": "Close"
+      }
+    ],
+    "copyExclude": [
+      "code"
+    ],
+    "summaryDisplay": "assets.generation-assets"
+  },
+  "generator": {
+    "frontend": true,
+    "backend": true,
+    "tests": true
+  },
+  "revision": 1
+}

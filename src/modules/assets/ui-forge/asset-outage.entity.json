@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "entity",
+  "name": "AssetOutage",
+  "label": "Asset Outage",
+  "plural": "Asset Outages",
+  "module": "assets",
+  "endpoint": "/asset-outages",
+  "idField": "id",
+  "titleField": "reference",
+  "fields": [
+    {
+      "name": "assetId",
+      "label": "Asset",
+      "dataType": "lookup",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "lookup": {
+        "endpoint": "/generation-assets",
+        "valueField": "id",
+        "labelField": "name"
+      },
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "reference",
+      "label": "Reference",
+      "dataType": "string",
+      "multiple": false,
+      "required": true,
+      "unique": true,
+      "maxLength": 20,
+      "upperCase": true,
+      "readOnly": false,
+      "example": "OUT-0001"
+    },
+    {
+      "name": "outageType",
+      "label": "Outage type",
+      "dataType": "enum",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "options": [
+        "Planned",
+        "Forced"
+      ],
+      "defaultValue": "Planned",
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "status",
+      "label": "Status",
+      "dataType": "enum",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "options": [
+        "Requested",
+        "Approved",
+        "Rejected",
+        "Completed"
+      ],
+      "defaultValue": "Requested",
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "startAt",
+      "label": "Starts",
+      "dataType": "datetime",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "upperCase": false,
+      "readOnly": false,
+      "example": "2026-11-02T06:00"
+    },
+    {
+      "name": "endAt",
+      "label": "Ends",
+      "dataType": "datetime",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "upperCase": false,
+      "readOnly": false,
+      "example": "2026-11-03T18:00"
+    },
+    {
+      "name": "unavailableMw",
+      "label": "Unavailable (MW)",
+      "dataType": "decimal",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "min": 0.0,
+      "decimals": 2,
+      "upperCase": false,
+      "readOnly": false,
+      "example": 120
+    },
+    {
+      "name": "reason",
+      "label": "Reason",
+      "dataType": "text",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "maxLength": 500,
+      "upperCase": false,
+      "readOnly": false,
+      "example": "Inverter replacement"
+    }
+  ],
+  "permissions": {
+    "view": "assets.view",
+    "create": "assets.edit",
+    "update": "assets.edit",
+    "delete": "assets.delete"
+  },
+  "parent": {
+    "entity": "GenerationAsset",
+    "field": "assetId",
+    "onParentDelete": "restrict"
+  },
+  "backend": {
+    "generate": true,
+    "customActions": []
+  },
+  "description": "Planned or forced unavailability of a generation asset.",
+  "revision": 1
+}

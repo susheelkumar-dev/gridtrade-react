@@ -1,0 +1,7 @@
+/* Theme variables taken from the Ext JS app (sass var files). */
+:root {
+  --ext-base-color: #0f766e;
+  --ext-font-family: 'Open Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+  --ext-font-size: 13px;
+  --ext-grid-row-cell-font-size: 13px;
+}

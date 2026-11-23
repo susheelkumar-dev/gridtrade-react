@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "entity",
+  "name": "MyTestEntry",
+  "label": "My Test Entry",
+  "plural": "My Test Entries",
+  "module": "data",
+  "endpoint": "/my-test-enteries",
+  "idField": "id",
+  "titleField": "name",
+  "fields": [
+    {
+      "name": "code",
+      "label": "Code",
+      "dataType": "string",
+      "multiple": false,
+      "required": true,
+      "unique": true,
+      "maxLength": 20,
+      "upperCase": true,
+      "readOnly": false
+    },
+    {
+      "name": "name",
+      "label": "Name",
+      "dataType": "string",
+      "multiple": false,
+      "required": true,
+      "unique": false,
+      "maxLength": 80,
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "text",
+      "label": "Text",
+      "dataType": "string",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "maxLength": 80,
+      "upperCase": false,
+      "readOnly": false
+    },
+    {
+      "name": "status",
+      "label": "Status",
+      "dataType": "enum",
+      "multiple": false,
+      "required": false,
+      "unique": false,
+      "options": [
+        "Option A",
+        "Option B"
+      ],
+      "upperCase": false,
+      "readOnly": false
+    }
+  ],
+  "permissions": {
+    "view": "test.view",
+    "create": "test.edit",
+    "update": "test.edit",
+    "delete": "test.delete"
+  },
+  "permissionModule": {
+    "module": "test",
+    "label": "Test",
+    "actions": [
+      "view",
+      "edit",
+      "delete"
+    ],
+    "actionLabels": {},
+    "grants": {
+      "admin": [
+        "view",
+        "edit",
+        "delete"
+      ]
+    }
+  },
+  "backend": {
+    "generate": true,
+    "customActions": []
+  },
+  "revision": 2
+}

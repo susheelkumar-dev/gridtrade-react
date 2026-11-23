@@ -1,0 +1,32 @@
+{
+  "name": "gt-react",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GT migrated from Ext JS to React + TypeScript by extjs-migration-agent.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "build:portfolio": "tsc --noEmit && vite build --mode portfolio && node scripts/copy-registration.mjs"
+  },
+  "dependencies": {
+    "@extreact/framework": "file:vendor/extreact-framework-1.1.2.tgz",
+    "@extreact/runtime": "file:vendor/extreact-runtime-1.1.0.tgz",
+    "@fontsource/open-sans": "5.0.28",
+    "@fortawesome/fontawesome-free": "5.15.4",
+    "ag-grid-community": "36.2.0",
+    "ag-grid-react": "36.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "write-excel-file": "4.1.1"
+  },
+  "devDependencies": {
+    "vite": "5.4.2",
+    "typescript": "5.5.4",
+    "sass": "1.77.8",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0"
+  }
+}

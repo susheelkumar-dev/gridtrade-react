@@ -1,0 +1,31 @@
+name: build
+
+# Type-check and build the migrated app. On a tag (v*), publish the portfolio build as a release asset:
+# the portfolio's stage script downloads the latest one into portfolio-client/public/lab/gridtrade.
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22, cache: npm}
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm run build:portfolio
+      - run: cd dist && zip -qr ../gridtrade-react-portfolio.zip .
+      - uses: actions/upload-artifact@v4
+        with: {name: gridtrade-react-portfolio, path: gridtrade-react-portfolio.zip}
+      - if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with: {files: gridtrade-react-portfolio.zip}

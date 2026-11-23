@@ -1,0 +1,289 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "display",
+  "id": "assets.asset-outages",
+  "name": "AssetOutageMasterSlave",
+  "title": "Asset Outages",
+  "description": "Pick an asset on the left; plan and track its outages on the right.",
+  "type": "master-slave",
+  "module": "assets",
+  "route": "assets/asset-outages",
+  "icon": "x-fa fa-plug",
+  "openMode": "tab",
+  "menu": {
+    "id": "assets.asset-outages",
+    "title": "Asset Outages",
+    "parent": "assets",
+    "icon": "x-fa fa-plug",
+    "sortOrder": 30,
+    "params": {},
+    "requiredPermissions": [],
+    "enabled": true
+  },
+  "folders": [],
+  "permissions": {
+    "required": [],
+    "actions": {}
+  },
+  "masterSlave": {
+    "master": {
+      "entity": "GenerationAsset",
+      "summary": {
+        "columns": [
+          {
+            "field": "code",
+            "width": 100,
+            "sortable": true,
+            "filter": true,
+            "hidden": false
+          },
+          {
+            "field": "name",
+            "flex": 1.0,
+            "sortable": true,
+            "filter": true,
+            "hidden": false
+          },
+          {
+            "field": "assetType",
+            "width": 100,
+            "sortable": true,
+            "filter": true,
+            "hidden": false
+          },
+          {
+            "field": "capacityMw",
+            "width": 120,
+            "sortable": true,
+            "filter": true,
+            "hidden": false
+          },
+          {
+            "field": "status",
+            "width": 120,
+            "sortable": true,
+            "filter": true,
+            "hidden": false,
+            "renderer": "badge",
+            "badgeTones": {
+              "Planned": "blue",
+              "Operational": "green",
+              "Retired": "gray"
+            }
+          }
+        ],
+        "searchFields": [
+          {
+            "field": "assetType",
+            "operator": "eq",
+            "required": false
+          }
+        ],
+        "remote": false,
+        "sorters": [
+          {
+            "field": "name",
+            "direction": "ASC"
+          }
+        ],
+        "toolbarActions": [
+          {
+            "id": "refresh",
+            "kind": "refresh"
+          }
+        ],
+        "rowActions": [],
+        "selection": "single",
+        "autoLoad": true,
+        "features": {}
+      }
+    },
+    "detail": {
+      "entity": "AssetOutage",
+      "relation": "child",
+      "linkField": "assetId",
+      "entry": {
+        "columns": 2,
+        "sections": [
+          {
+            "id": "outage",
+            "title": "Outage",
+            "kind": "panel",
+            "collapsible": false,
+            "collapsed": false,
+            "items": [
+              {
+                "field": "reference",
+                "span": 1,
+                "placeholder": "OUT-0001"
+              },
+              {
+                "field": "outageType",
+                "span": 1,
+                "widget": "radio"
+              },
+              {
+                "field": "status",
+                "span": 1
+              }
+            ]
+          },
+          {
+            "id": "window",
+            "title": "Window",
+            "kind": "panel",
+            "collapsible": false,
+            "collapsed": false,
+            "items": [
+              {
+                "field": "startAt",
+                "span": 1
+              },
+              {
+                "field": "endAt",
+                "span": 1
+              },
+              {
+                "field": "unavailableMw",
+                "span": 1
+              }
+            ]
+          },
+          {
+            "id": "reason",
+            "title": "Reason",
+            "kind": "panel",
+            "collapsible": false,
+            "collapsed": false,
+            "items": [
+              {
+                "field": "reason",
+                "span": 2
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "save",
+            "kind": "save"
+          },
+          {
+            "id": "audit",
+            "kind": "audit",
+            "label": "History"
+          },
+          {
+            "id": "reset",
+            "kind": "reset"
+          },
+          {
+            "id": "delete",
+            "kind": "delete"
+          },
+          {
+            "id": "cancel",
+            "kind": "cancel",
+            "label": "Close"
+          }
+        ],
+        "copyExclude": []
+      },
+      "summary": {
+        "columns": [
+          {
+            "field": "reference",
+            "width": 120,
+            "sortable": true,
+            "filter": true,
+            "hidden": false
+          },
+          {
+            "field": "outageType",
+            "width": 110,
+            "sortable": true,
+            "filter": true,
+            "hidden": false,
+            "renderer": "badge",
+            "badgeTones": {
+              "Planned": "blue",
+              "Forced": "red"
+            }
+          },
+          {
+            "field": "startAt",
+            "width": 160,
+            "sortable": true,
+            "filter": true,
+            "hidden": false
+          },
+          {
+            "field": "endAt",
+            "width": 160,
+            "sortable": true,
+            "filter": true,
+            "hidden": false
+          },
+          {
+            "field": "unavailableMw",
+            "width": 150,
+            "sortable": true,
+            "filter": true,
+            "hidden": false
+          },
+          {
+            "field": "status",
+            "width": 120,
+            "sortable": true,
+            "filter": true,
+            "hidden": false,
+            "renderer": "badge",
+            "badgeTones": {
+              "Requested": "amber",
+              "Approved": "green",
+              "Rejected": "red",
+              "Completed": "gray"
+            }
+          }
+        ],
+        "searchFields": [],
+        "remote": false,
+        "sorters": [
+          {
+            "field": "startAt",
+            "direction": "DESC"
+          }
+        ],
+        "toolbarActions": [
+          {
+            "id": "new",
+            "kind": "new",
+            "label": "New outage"
+          },
+          {
+            "id": "delete",
+            "kind": "delete"
+          },
+          {
+            "id": "refresh",
+            "kind": "refresh"
+          }
+        ],
+        "rowActions": [],
+        "selection": "single",
+        "autoLoad": true,
+        "features": {}
+      }
+    },
+    "orientation": "horizontal",
+    "split": 42,
+    "unsavedChanges": "confirm",
+    "stackBelow": 900
+  },
+  "generator": {
+    "frontend": true,
+    "backend": true,
+    "tests": true
+  },
+  "revision": 1
+}

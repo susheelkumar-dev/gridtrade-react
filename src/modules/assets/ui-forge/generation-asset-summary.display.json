@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "display",
+  "id": "assets.generation-assets",
+  "name": "GenerationAssetSummary",
+  "title": "Generation Assets",
+  "description": "Search, filter and manage generation assets.",
+  "type": "summary",
+  "module": "assets",
+  "route": "assets/generation-assets",
+  "icon": "x-fa fa-solar-panel",
+  "openMode": "tab",
+  "entity": "GenerationAsset",
+  "menu": {
+    "id": "assets.generation-assets",
+    "title": "Generation Assets",
+    "parent": "assets",
+    "icon": "x-fa fa-industry",
+    "sortOrder": 10,
+    "params": {},
+    "requiredPermissions": [],
+    "enabled": true
+  },
+  "folders": [
+    {
+      "id": "assets",
+      "title": "Assets",
+      "icon": "x-fa fa-solar-panel",
+      "sortOrder": 55
+    }
+  ],
+  "permissions": {
+    "required": [],
+    "actions": {}
+  },
+  "summary": {
+    "columns": [
+      {
+        "field": "code",
+        "width": 110,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      },
+      {
+        "field": "name",
+        "flex": 1.4,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      },
+      {
+        "field": "assetType",
+        "width": 120,
+        "sortable": true,
+        "filter": true,
+        "hidden": false,
+        "renderer": "badge",
+        "badgeTones": {
+          "Solar": "amber",
+          "Wind": "blue",
+          "Hydro": "blue",
+          "Thermal": "gray",
+          "Battery": "green"
+        }
+      },
+      {
+        "field": "capacityMw",
+        "width": 140,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      },
+      {
+        "field": "ownerId",
+        "label": "Owner",
+        "flex": 1.0,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      },
+      {
+        "field": "region",
+        "width": 110,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      },
+      {
+        "field": "commissionedOn",
+        "width": 150,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      },
+      {
+        "field": "tariffInrMwh",
+        "width": 170,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      },
+      {
+        "field": "status",
+        "width": 130,
+        "sortable": true,
+        "filter": true,
+        "hidden": false,
+        "renderer": "badge",
+        "badgeTones": {
+          "Planned": "blue",
+          "Operational": "green",
+          "Retired": "gray"
+        }
+      },
+      {
+        "field": "gridConnected",
+        "label": "Grid",
+        "width": 90,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      }
+    ],
+    "searchFields": [
+      {
+        "field": "assetType",
+        "operator": "eq",
+        "required": false
+      },
+      {
+        "field": "region",
+        "operator": "eq",
+        "required": false
+      },
+      {
+        "field": "status",
+        "operator": "eq",
+        "required": false
+      },
+      {
+        "field": "capacityMw",
+        "label": "Capacity (MW)",
+        "operator": "between",
+        "required": false
+      },
+      {
+        "field": "commissionedOn",
+        "operator": "between",
+        "required": false
+      }
+    ],
+    "remote": true,
+    "pageSize": 25,
+    "sorters": [
+      {
+        "field": "name",
+        "direction": "ASC"
+      }
+    ],
+    "toolbarActions": [
+      {
+        "id": "new",
+        "kind": "new"
+      },
+      {
+        "id": "open",
+        "kind": "open"
+      },
+      {
+        "id": "retire",
+        "kind": "custom",
+        "label": "Retire",
+        "permission": "update",
+        "confirm": "Retire the selected asset(s)? They stay in the list as Retired.",
+        "path": "retire"
+      },
+      {
+        "id": "delete",
+        "kind": "delete"
+      },
+      {
+        "id": "refresh",
+        "kind": "refresh"
+      }
+    ],
+    "rowActions": [
+      {
+        "id": "open",
+        "kind": "open",
+        "label": "Open"
+      },
+      {
+        "id": "retire",
+        "kind": "custom",
+        "label": "Retire",
+        "permission": "update",
+        "path": "retire"
+      },
+      {
+        "id": "delete",
+        "kind": "delete",
+        "label": "Delete"
+      }
+    ],
+    "emptyText": "No generation assets match these criteria.",
+    "selection": "single",
+    "autoLoad": true,
+    "entryDisplay": "assets.generation-asset",
+    "features": {}
+  },
+  "generator": {
+    "frontend": true,
+    "backend": true,
+    "tests": true
+  },
+  "revision": 1
+}

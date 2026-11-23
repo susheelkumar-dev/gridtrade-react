@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "app": "gridtrade",
+  "module": {
+    "id": "gridtrade.core",
+    "version": "1.0.1",
+    "title": "GridTrade's Ext-style screens (Ext.define views on @extreact/runtime)",
+    "owner": "GridTrade"
+  },
+  "displays": [
+    {
+      "id": "dashboard",
+      "title": "Dashboard",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "dashboard.view"
+      ],
+      "icon": "x-fa fa-tachometer-alt",
+      "config": {
+        "xtype": "gt-dashboard",
+        "screenKey": "dashboard"
+      }
+    },
+    {
+      "id": "contracts.summary",
+      "title": "Contract Summary",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "contracts.view"
+      ],
+      "icon": "x-fa fa-file-alt",
+      "config": {
+        "xtype": "gt-contractsummary",
+        "screenKey": "contracts"
+      }
+    },
+    {
+      "id": "contracts.entry",
+      "title": "Contract",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "contracts.view"
+      ],
+      "icon": "x-fa fa-edit",
+      "config": {
+        "xtype": "gt-contractentry",
+        "screenKey": "contract"
+      },
+      "params": [
+        {
+          "name": "id",
+          "required": true,
+          "description": "record id, or 'new'"
+        }
+      ]
+    },
+    {
+      "id": "contracts.versions",
+      "title": "Contract Versions",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "contracts.view"
+      ],
+      "icon": "x-fa fa-code-branch",
+      "config": {
+        "xtype": "gt-contractversions",
+        "screenKey": "versions"
+      }
+    },
+    {
+      "id": "trades.blotter",
+      "title": "Trade Blotter",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "trades.view"
+      ],
+      "icon": "x-fa fa-exchange-alt",
+      "config": {
+        "xtype": "gt-tradeblotter",
+        "screenKey": "trades"
+      }
+    },
+    {
+      "id": "data.timeseries",
+      "title": "Time Series",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "data.view"
+      ],
+      "icon": "x-fa fa-chart-line",
+      "config": {
+        "xtype": "gt-timeseriessummary",
+        "screenKey": "timeseries",
+        "wrap": true
+      }
+    },
+    {
+      "id": "data.timeseries-data",
+      "title": "Series Data",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "data.view"
+      ],
+      "icon": "x-fa fa-table",
+      "config": {
+        "xtype": "gt-timeseriesdata",
+        "screenKey": "tsdata"
+      },
+      "params": [
+        {
+          "name": "id",
+          "required": true,
+          "description": "record id, or 'new'"
+        }
+      ]
+    },
+    {
+      "id": "data.ingestion",
+      "title": "Data Ingestion",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "data.view"
+      ],
+      "icon": "x-fa fa-cloud-upload-alt",
+      "config": {
+        "xtype": "gt-dataingestion",
+        "screenKey": "ingestion"
+      }
+    },
+    {
+      "id": "reference.legal-entities",
+      "title": "Legal Entities",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "reference.view"
+      ],
+      "icon": "x-fa fa-university",
+      "config": {
+        "xtype": "gt-legalentities",
+        "screenKey": "legalEntities"
+      }
+    },
+    {
+      "id": "reference.commodities",
+      "title": "Commodities",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "reference.view"
+      ],
+      "icon": "x-fa fa-cubes",
+      "config": {
+        "xtype": "gt-commodities",
+        "screenKey": "commodities"
+      }
+    },
+    {
+      "id": "users.list",
+      "title": "Users",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "users.view"
+      ],
+      "icon": "x-fa fa-user",
+      "config": {
+        "xtype": "gt-userlist",
+        "screenKey": "users"
+      }
+    },
+    {
+      "id": "users.roles",
+      "title": "Roles",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "users.view"
+      ],
+      "icon": "x-fa fa-user-shield",
+      "config": {
+        "xtype": "gt-rolelist",
+        "screenKey": "roles"
+      }
+    },
+    {
+      "id": "audit.trail",
+      "title": "Audit Trail",
+      "type": "custom",
+      "key": "ExtScreen",
+      "requiredPermissions": [
+        "audit.view"
+      ],
+      "icon": "x-fa fa-history",
+      "config": {
+        "xtype": "gt-audittrail",
+        "screenKey": "audit"
+      }
+    }
+  ],
+  "menus": [
+    {
+      "id": "dashboard",
+      "title": "Dashboard",
+      "sortOrder": 10,
+      "display": "dashboard",
+      "icon": "x-fa fa-tachometer-alt"
+    },
+    {
+      "id": "contracts",
+      "title": "Contracts",
+      "sortOrder": 20,
+      "icon": "x-fa fa-file-alt"
+    },
+    {
+      "id": "contracts.summary",
+      "title": "Contract Summary",
+      "sortOrder": 10,
+      "parent": "contracts",
+      "display": "contracts.summary",
+      "icon": "x-fa fa-list"
+    },
+    {
+      "id": "contracts.new",
+      "title": "New Contract",
+      "sortOrder": 20,
+      "parent": "contracts",
+      "display": "contracts.entry",
+      "icon": "x-fa fa-plus",
+      "params": {
+        "id": "new"
+      },
+      "requiredPermissions": [
+        "contracts.edit"
+      ]
+    },
+    {
+      "id": "contracts.versions",
+      "title": "Contract Versions",
+      "sortOrder": 30,
+      "parent": "contracts",
+      "display": "contracts.versions",
+      "icon": "x-fa fa-code-branch"
+    },
+    {
+      "id": "trading",
+      "title": "Trading",
+      "sortOrder": 30,
+      "icon": "x-fa fa-exchange-alt"
+    },
+    {
+      "id": "trading.blotter",
+      "title": "Trade Blotter",
+      "sortOrder": 10,
+      "parent": "trading",
+      "display": "trades.blotter",
+      "icon": "x-fa fa-list-alt"
+    },
+    {
+      "id": "trading.new",
+      "title": "New Trade",
+      "sortOrder": 20,
+      "parent": "trading",
+      "display": "trades.blotter",
+      "icon": "x-fa fa-plus",
+      "action": "new",
+      "requiredPermissions": [
+        "trades.edit"
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Data",
+      "sortOrder": 40,
+      "icon": "x-fa fa-database"
+    },
+    {
+      "id": "data.timeseries",
+      "title": "Time Series",
+      "sortOrder": 10,
+      "parent": "data",
+      "display": "data.timeseries",
+      "icon": "x-fa fa-chart-line"
+    },
+    {
+      "id": "data.ingestion",
+      "title": "Data Ingestion",
+      "sortOrder": 20,
+      "parent": "data",
+      "display": "data.ingestion",
+      "icon": "x-fa fa-cloud-upload-alt"
+    },
+    {
+      "id": "reference",
+      "title": "Reference Data",
+      "sortOrder": 50,
+      "icon": "x-fa fa-book"
+    },
+    {
+      "id": "reference.legal-entities",
+      "title": "Legal Entities",
+      "sortOrder": 20,
+      "parent": "reference",
+      "display": "reference.legal-entities",
+      "icon": "x-fa fa-university"
+    },
+    {
+      "id": "reference.commodities",
+      "title": "Commodities",
+      "sortOrder": 30,
+      "parent": "reference",
+      "display": "reference.commodities",
+      "icon": "x-fa fa-cubes"
+    },
+    {
+      "id": "audit",
+      "title": "Audit Trail",
+      "sortOrder": 60,
+      "display": "audit.trail",
+      "icon": "x-fa fa-history"
+    },
+    {
+      "id": "users",
+      "title": "User Management",
+      "sortOrder": 70,
+      "icon": "x-fa fa-users-cog"
+    },
+    {
+      "id": "users.list",
+      "title": "Users",
+      "sortOrder": 10,
+      "parent": "users",
+      "display": "users.list",
+      "icon": "x-fa fa-user"
+    },
+    {
+      "id": "users.new",
+      "title": "New User",
+      "sortOrder": 20,
+      "parent": "users",
+      "display": "users.list",
+      "icon": "x-fa fa-user-plus",
+      "action": "new",
+      "requiredPermissions": [
+        "users.manage"
+      ]
+    },
+    {
+      "id": "users.roles",
+      "title": "Roles",
+      "sortOrder": 30,
+      "parent": "users",
+      "display": "users.roles",
+      "icon": "x-fa fa-user-shield"
+    },
+    {
+      "id": "users.new-role",
+      "title": "New Role",
+      "sortOrder": 40,
+      "parent": "users",
+      "display": "users.roles",
+      "icon": "x-fa fa-plus",
+      "action": "new",
+      "requiredPermissions": [
+        "users.manage"
+      ]
+    }
+  ]
+}

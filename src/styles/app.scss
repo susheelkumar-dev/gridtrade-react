@@ -1,0 +1,197 @@
+// Generated from the Ext JS app's sass by extjs-migration-agent. Plain SCSS, compiled by Vite.
+/* ---- sass/var.scss (var) ---- */
+// Theme variables (Triton). Teal brand colour; everything else inherits from it.
+$base-color: #0f766e;
+$font-family: 'Open Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+$font-size: 13px;
+$grid-row-cell-font-size: 13px;
+
+/* ---- sass/etc/all.scss (etc) ---- */
+// Global Sass functions/mixins (none needed yet).
+
+/* ---- sass/src.scss (src) ---- */
+// Application styles. Plain CSS selectors; compiled by Sencha Fashion with the theme.
+
+$gt-teal: #0f766e;
+$gt-teal-dark: #0b4f4a;
+$gt-ink: #1f2a33;
+$gt-muted: #64748b;
+$gt-line: #dfe5ea;
+
+// ---------- shell ----------
+.gt-main { background: #eef2f4; }
+.gt-header-wrap { box-shadow: 0 1px 3px rgba(15, 30, 40, 0.18); z-index: 2; }
+.gt-header.x-toolbar { background: $gt-teal-dark; border: 0; padding: 0 14px; }
+.gt-brand { display: flex; align-items: center; color: #fff; }
+.gt-brand .gt-logo { display: flex; margin-right: 10px; }
+.gt-brand .gt-logo rect { fill: #14b8a6; }
+.gt-brand-name { font-size: 17px; font-weight: 600; letter-spacing: 0.2px; line-height: 20px; }
+.gt-brand-name span { color: #5eead4; font-weight: 400; }
+.gt-brand-sub { font-size: 11px; color: #a7d8d2; line-height: 14px; }
+.gt-env-badge { color: #fde68a; background: rgba(253, 230, 138, 0.12); border: 1px solid rgba(253, 230, 138, 0.4); border-radius: 12px;
+    padding: 2px 10px; font-size: 11px; font-weight: 600; margin-right: 8px; }
+.gt-header-btn.x-btn { background: transparent; border-color: transparent; }
+.gt-header-btn.x-btn .x-btn-inner, .gt-header-btn.x-btn .x-btn-icon-el, .gt-header-btn.x-btn .x-btn-arrow-right:after { color: #e6fffb; }
+.gt-header-btn.x-btn-over { background: rgba(255, 255, 255, 0.12); }
+
+.gt-menubar.x-toolbar { background: #fff; border-width: 0 0 1px 0; border-color: $gt-line; padding: 2px 10px; }
+.gt-menubar-btn.x-btn { background: transparent; border-color: transparent; }
+.gt-menubar-btn.x-btn .x-btn-inner { color: $gt-ink; font-weight: 600; }
+.gt-menubar-btn.x-btn .x-btn-icon-el { color: $gt-teal; }
+.gt-menubar-btn.x-btn-over, .gt-menubar-btn.x-btn-menu-active { background: #e6f4f2; }
+.gt-clock { color: $gt-muted; font-size: 12px; }
+
+.gt-screens > .x-panel-body { background: #eef2f4; }
+.gt-tabbar.x-tab-bar { background: #e2e8ec; }
+.gt-tabbar .x-tab { background-color: #d3dce1; border-color: #c4ced4; }
+.gt-tabbar .x-tab .x-tab-inner, .gt-tabbar .x-tab .x-tab-icon-el, .gt-tabbar .x-tab .x-tab-close-btn { color: #334155; }
+.gt-tabbar .x-tab-over { background-color: #c8d3d9; }
+.gt-tabbar .x-tab.x-tab-active { background-color: #fff; border-color: #fff; }
+.gt-tabbar .x-tab.x-tab-active .x-tab-inner, .gt-tabbar .x-tab.x-tab-active .x-tab-icon-el { color: $gt-teal; }
+.gt-statusbar.x-toolbar { background: #fff; border-width: 1px 0 0 0; border-color: $gt-line; padding: 0 12px; }
+.gt-statusbar .x-toolbar-text { font-size: 11px; color: $gt-muted; }
+.gt-dot-ok { color: #16a34a; font-size: 9px; }
+.gt-dot-down { color: #dc2626; font-size: 9px; }
+
+// ---------- common ----------
+.gt-muted { color: $gt-muted; }
+.gt-strong .x-form-display-field { font-weight: 600; }
+.gt-required { color: #dc2626; margin-left: 2px; font-weight: 700; }
+.gt-text-red { color: #b42318; font-weight: 600; }
+.gt-text-amber { color: #b45309; font-weight: 600; }
+.gt-empty { color: $gt-muted; padding: 24px; text-align: center; font-size: 13px; }
+.gt-empty .fa { margin-right: 6px; }
+.gt-range-sep { color: $gt-muted; }
+.gt-btn-primary.x-btn { background-color: $gt-teal; border-color: $gt-teal; }
+.gt-btn-primary.x-btn .x-btn-inner, .gt-btn-primary.x-btn .x-btn-icon-el { color: #fff; }
+.gt-btn-primary.x-btn-over { background-color: #0d9488; }
+.gt-btn-primary.x-btn-disabled { background-color: #e2e8f0; border-color: #e2e8f0; opacity: 1; }
+.gt-btn-primary.x-btn-disabled .x-btn-inner, .gt-btn-primary.x-btn-disabled .x-btn-icon-el { color: #94a3b8; }
+
+.gt-chip { display: inline-block; padding: 1px 9px; border-radius: 10px; font-size: 11px; font-weight: 600; line-height: 17px; white-space: nowrap; }
+.gt-chip-green { background: #dcfce7; color: #166534; }
+.gt-chip-blue { background: #dbeafe; color: #1e40af; }
+.gt-chip-amber { background: #fef3c7; color: #92400e; }
+.gt-chip-red { background: #fee2e2; color: #991b1b; }
+.gt-chip-grey { background: #e5e7eb; color: #374151; }
+
+.gt-side { font-weight: 700; }
+.gt-side-buy { color: #15803d; }
+.gt-side-sell { color: #b42318; }
+
+// ---------- toasts ----------
+.gt-toast .x-window-body { padding: 10px 12px; }
+.gt-toast-body { display: flex; align-items: flex-start; }
+.gt-toast-body .fa { font-size: 16px; margin-right: 8px; margin-top: 1px; }
+.gt-toast-success .fa { color: #16a34a; }
+.gt-toast-info .fa { color: #2563eb; }
+.gt-toast-warning .fa { color: #d97706; }
+.gt-toast-error .fa { color: #dc2626; }
+.gt-toast-error { border-left: 4px solid #dc2626 !important; }
+
+// ---------- generic grid ----------
+.gt-grid-tbar.x-toolbar { border-bottom: 1px solid $gt-line; }
+.gt-grid-bbar.x-toolbar { padding: 2px 10px; border-top: 1px solid $gt-line; }
+.gt-grid-bbar .x-toolbar-text { font-size: 12px; color: $gt-muted; }
+.gt-filter-summary { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; border-radius: 12px; padding: 1px 10px !important;
+    font-size: 12px; max-width: 520px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gt-link { color: #0d6efd; text-decoration: none; font-weight: 600; cursor: pointer; }
+.gt-link:hover { text-decoration: underline; color: #0a58ca; }
+.gt-editable .x-grid-cell-inner { background: rgba(250, 204, 21, 0.08); }
+.gt-filter-bar.x-toolbar { background: #f8fafb; border-bottom: 1px solid $gt-line; }
+
+// ---------- forms, windows ----------
+.gt-entryform .x-form-item-label-inner { color: #334155; }
+.gt-window-bbar.x-toolbar { border-top: 1px solid $gt-line; padding: 8px 12px; }
+.gt-screen-tbar.x-toolbar { border-bottom: 1px solid $gt-line; }
+.gt-entry-status { font-size: 12px; }
+.gt-audit-stamp .x-form-display-field { color: $gt-muted; font-size: 12px; line-height: 17px; }
+.gt-notional .x-form-display-field { font-size: 14px; }
+.gt-dirty-note { color: #b45309; font-weight: 600; }
+.gt-edit-trigger { color: $gt-teal; }
+
+.gt-banner { padding: 9px 14px; font-weight: 600; border-bottom: 1px solid $gt-line; }
+.gt-banner .fa { margin-right: 6px; }
+.gt-banner-ok { background: #ecfdf5; color: #166534; }
+.gt-banner-error { background: #fef2f2; color: #991b1b; }
+
+// ---------- filter panel ----------
+.gt-filterpanel .x-panel-body { background: #fbfcfd; }
+
+// ---------- audit compare ----------
+.gt-auditcompare .gt-changed { background: #fef3c7 !important; }
+.gt-auditcompare .gt-changed .x-grid-cell-inner { color: #78350f; font-weight: 600; }
+.gt-auditcompare .gt-attr-cell { background: #f8fafc; }
+.gt-auditcompare .gt-attr-changed .x-grid-cell-inner { font-weight: 700; }
+.gt-cmp-head { line-height: 16px; white-space: normal; }
+.gt-cmp-head .gt-muted { font-size: 11px; font-weight: 400; }
+.gt-json { border-right: 1px solid $gt-line; }
+.gt-json-head { background: #f1f5f9; padding: 6px 10px; font-weight: 600; border-bottom: 1px solid $gt-line; }
+.gt-json pre { margin: 0; padding: 10px; font: 12px/1.45 Consolas, Menlo, monospace; white-space: pre-wrap; word-break: break-word; }
+
+// ---------- dashboard ----------
+.gt-dashboard { background: #eef2f4; }
+.gt-card { border-radius: 6px; overflow: hidden; box-shadow: 0 1px 2px rgba(15, 30, 40, 0.08); }
+.gt-kpi-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.gt-kpi { flex: 1 1 180px; display: flex; align-items: center; background: #fff; border-radius: 8px; padding: 14px 16px; cursor: pointer;
+    box-shadow: 0 1px 2px rgba(15, 30, 40, 0.08); border-left: 4px solid $gt-teal; transition: transform 0.12s, box-shadow 0.12s; }
+.gt-kpi:hover { transform: translateY(-1px); box-shadow: 0 4px 10px rgba(15, 30, 40, 0.12); }
+.gt-kpi-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 18px; }
+.gt-kpi-value { font-size: 24px; font-weight: 700; color: $gt-ink; line-height: 28px; }
+.gt-kpi-label { font-size: 12px; color: $gt-muted; }
+.gt-kpi-teal { border-left-color: #0f766e; } .gt-kpi-teal .gt-kpi-icon { background: #ccfbf1; color: #0f766e; }
+.gt-kpi-amber { border-left-color: #d97706; } .gt-kpi-amber .gt-kpi-icon { background: #fef3c7; color: #b45309; }
+.gt-kpi-blue { border-left-color: #2563eb; } .gt-kpi-blue .gt-kpi-icon { background: #dbeafe; color: #1d4ed8; }
+.gt-kpi-violet { border-left-color: #7c3aed; } .gt-kpi-violet .gt-kpi-icon { background: #ede9fe; color: #6d28d9; }
+.gt-kpi-red { border-left-color: #dc2626; } .gt-kpi-red .gt-kpi-icon { background: #fee2e2; color: #b91c1c; }
+.gt-notice { border-left: 3px solid #2563eb; background: #f8fafc; padding: 8px 10px; margin-bottom: 10px; border-radius: 4px; font-size: 12.5px; line-height: 18px; }
+.gt-notice-warn { border-left-color: #d97706; background: #fffbeb; }
+.gt-notice-title { font-weight: 700; margin-bottom: 2px; }
+
+// ---------- ingestion ----------
+.gt-upload-help { font-size: 12px; color: $gt-muted; line-height: 17px; }
+.gt-upload-help code { background: #f1f5f9; padding: 1px 4px; border-radius: 3px; font-size: 11.5px; }
+
+// ---------- base grid: title-bar tools, rows ----------
+.gt-grid-header .gt-tool-btn.x-btn { background: transparent; border-color: transparent; margin-left: 4px; }
+.gt-grid-header .gt-tool-btn.x-btn .x-btn-icon-el { color: #e6fffb; font-size: 15px; }
+.gt-grid-header .gt-tool-btn.x-btn-over { background: rgba(255, 255, 255, 0.16); }
+.gt-grid-header .gt-tool-btn.x-btn-pressed, .gt-grid-header .gt-tool-btn.x-btn-menu-active { background: rgba(255, 255, 255, 0.24); }
+.gt-grid-header .gt-tool-active.x-btn { background: #fbbf24; }
+.gt-grid-header .gt-tool-active.x-btn .x-btn-icon-el { color: #3b2f05; }
+.gt-grid-header .gt-quicksearch { margin-right: 6px; }
+.gt-grid-header .gt-quicksearch .x-form-text-wrap { border-radius: 4px; }
+.gt-row-cancelled .x-grid-cell { color: #94a3b8; text-decoration: line-through; }
+.gt-row-detail { padding: 8px 14px; line-height: 1.6; color: #334155; }
+.gt-filter-window .x-window-body { background: #fbfcfd; }
+.gt-badge { padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+.gt-badge-buy { background: #e6f4ea; color: #137333; }
+.gt-badge-sell { background: #fce8e6; color: #c5221f; }
+.gt-text-green { color: #16a34a; }
+
+// ---------- filter row under grid headers ----------
+.gt-filterrow-field .x-form-text-wrap, .gt-filterrow-field .x-form-trigger-wrap { min-height: 26px; }
+.gt-filterrow-field input.x-form-field { height: 24px; min-height: 24px; padding: 2px 6px; font-size: 12px; }
+.gt-filterrow-field .x-form-trigger { width: 22px; height: 24px; line-height: 24px; font-size: 12px; }
+.gt-filterrow-field .x-form-trigger:before { line-height: 24px; }
+
+// ---------- user management ----------
+.gt-row-disabled .x-grid-cell { color: #94a3b8; }
+.gt-permissionmatrix .gt-perm-na { background: #f1f5f9; }
+.gt-perm-summary .x-form-display-field { font-size: 12px; line-height: 18px; color: #334155; }
+
+// ---------- Excel-style range fill (GT.ux.grid.plugin.RangeFill) ----------
+$gt-fill-color: #0f766e;
+.x-grid-item td.gt-fill-sel { background: rgba(15, 118, 110, 0.12); box-shadow: inset 2px 0 0 $gt-fill-color, inset -2px 0 0 $gt-fill-color; }
+.x-grid-item td.gt-fill-sel.gt-fill-top { box-shadow: inset 2px 0 0 $gt-fill-color, inset -2px 0 0 $gt-fill-color, inset 0 2px 0 $gt-fill-color; }
+.x-grid-item td.gt-fill-sel.gt-fill-bottom { box-shadow: inset 2px 0 0 $gt-fill-color, inset -2px 0 0 $gt-fill-color, inset 0 -2px 0 $gt-fill-color; }
+.x-grid-item td.gt-fill-sel.gt-fill-top.gt-fill-bottom { box-shadow: inset 0 0 0 2px $gt-fill-color; }
+.x-grid-item td.gt-fill-anchor { background: #fff; }
+.x-grid-item td.gt-fill-preview { background: rgba(15, 118, 110, 0.05); box-shadow: inset 2px 0 0 rgba(15, 118, 110, 0.5), inset -2px 0 0 rgba(15, 118, 110, 0.5); outline: 1px dashed $gt-fill-color; outline-offset: -1px; }
+.x-grid-item td.gt-fill-handle { position: relative; }
+.x-grid-item td.gt-fill-handle::after {
+    content: ''; position: absolute; right: 0; bottom: 0; width: 8px; height: 8px; z-index: 2;
+    background: $gt-fill-color; border: 1px solid #fff; cursor: crosshair;
+}
+.gt-fill-dragging, .gt-fill-dragging * { user-select: none !important; cursor: crosshair !important; }
+.gt-range-info { color: $gt-fill-color; font-weight: 500; }

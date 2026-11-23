@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0",
+  "kind": "display",
+  "id": "data.my-test-entries",
+  "name": "MyTestEntriesSummary",
+  "title": "My Test Entries",
+  "type": "summary",
+  "module": "data",
+  "route": "data/my-test-entries",
+  "openMode": "tab",
+  "entity": "MyTestEntry",
+  "menu": {
+    "id": "data.my-test-entries",
+    "title": "My Test Entries",
+    "parent": "data",
+    "sortOrder": 90,
+    "params": {},
+    "requiredPermissions": [],
+    "enabled": true
+  },
+  "folders": [],
+  "permissions": {
+    "required": [],
+    "actions": {}
+  },
+  "summary": {
+    "columns": [
+      {
+        "field": "code",
+        "width": 130,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      },
+      {
+        "field": "name",
+        "flex": 1.0,
+        "sortable": true,
+        "filter": true,
+        "hidden": false
+      }
+    ],
+    "searchFields": [],
+    "remote": false,
+    "sorters": [
+      {
+        "field": "name",
+        "direction": "ASC"
+      }
+    ],
+    "toolbarActions": [
+      {
+        "id": "new",
+        "kind": "new"
+      },
+      {
+        "id": "open",
+        "kind": "open"
+      },
+      {
+        "id": "delete",
+        "kind": "delete"
+      },
+      {
+        "id": "refresh",
+        "kind": "refresh"
+      }
+    ],
+    "rowActions": [
+      {
+        "id": "open",
+        "kind": "open",
+        "label": "Open"
+      },
+      {
+        "id": "delete",
+        "kind": "delete",
+        "label": "Delete"
+      }
+    ],
+    "selection": "single",
+    "autoLoad": true,
+    "entryDisplay": "data.my-test-entry",
+    "features": {}
+  },
+  "generator": {
+    "frontend": true,
+    "backend": true,
+    "tests": true
+  },
+  "revision": 1
+}

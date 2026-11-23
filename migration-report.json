@@ -1,0 +1,1488 @@
+{
+  "app": {
+    "name": "GT",
+    "namespace": "GT",
+    "root": "D:\\ExtJsToReactTool\\gridtrade-contracts-extjs\\web",
+    "toolkit": "classic",
+    "theme": "theme-triton",
+    "framework": "ext"
+  },
+  "output": "D:\\repos\\gridtrade-react",
+  "shell": "framework",
+  "appFiles": [
+    "registration/gridtrade.core.manifest.json",
+    "registration/gridtrade.reference.manifest.json",
+    "registration/gridtrade.ui-forge.assets.manifest.json",
+    "registration/gridtrade.ui-forge.data.manifest.json",
+    "src/app-bridge.ts",
+    "src/app.config.ts",
+    "src/displays.ts",
+    "src/modules/assets/asset-outage.schema.generated.ts",
+    "src/modules/assets/displays/asset-outage-master-slave/asset-outage-master-slave.config.generated.ts",
+    "src/modules/assets/displays/asset-outage-master-slave/asset-outage-master-slave.hooks.ts",
+    "src/modules/assets/displays/asset-outage-master-slave/AssetOutageMasterSlave.tsx",
+    "src/modules/assets/displays/generation-asset-entry/generation-asset-entry.config.generated.ts",
+    "src/modules/assets/displays/generation-asset-entry/generation-asset-entry.hooks.ts",
+    "src/modules/assets/displays/generation-asset-entry/GenerationAssetEntry.tsx",
+    "src/modules/assets/displays/generation-asset-summary/generation-asset-summary.config.generated.ts",
+    "src/modules/assets/displays/generation-asset-summary/generation-asset-summary.hooks.ts",
+    "src/modules/assets/displays/generation-asset-summary/GenerationAssetSummary.tsx",
+    "src/modules/assets/generation-asset.schema.generated.ts",
+    "src/modules/assets/services/asset-outage.api.generated.ts",
+    "src/modules/assets/services/generation-asset.api.generated.ts",
+    "src/modules/assets/types/asset-outage.generated.ts",
+    "src/modules/assets/types/generation-asset.generated.ts",
+    "src/modules/assets/ui-forge/asset-outage-master-slave.display.json",
+    "src/modules/assets/ui-forge/asset-outage.entity.json",
+    "src/modules/assets/ui-forge/generation-asset-entry.display.json",
+    "src/modules/assets/ui-forge/generation-asset-summary.display.json",
+    "src/modules/assets/ui-forge/generation-asset.entity.json",
+    "src/modules/data/displays/my-test-entries-summary/my-test-entries-summary.config.generated.ts",
+    "src/modules/data/displays/my-test-entries-summary/my-test-entries-summary.hooks.ts",
+    "src/modules/data/displays/my-test-entries-summary/MyTestEntriesSummary.tsx",
+    "src/modules/data/displays/my-test-entry/my-test-entry.config.generated.ts",
+    "src/modules/data/displays/my-test-entry/my-test-entry.hooks.ts",
+    "src/modules/data/displays/my-test-entry/MyTestEntry.tsx",
+    "src/modules/data/my-test-entry.schema.generated.ts",
+    "src/modules/data/services/my-test-entry.api.generated.ts",
+    "src/modules/data/types/my-test-entry.generated.ts",
+    "src/modules/data/ui-forge/my-test-entries-summary.display.json",
+    "src/modules/data/ui-forge/my-test-entry.display.json",
+    "src/modules/data/ui-forge/my-test-entry.entity.json",
+    "src/modules/generated-displays.ts",
+    "src/modules/reference/counterparty.schema.ts",
+    "src/modules/reference/displays/counterparty-entry/CounterpartyEntry.tsx",
+    "src/modules/reference/displays/counterparty-summary/CounterpartySummary.tsx",
+    "src/modules/reference/index.ts",
+    "src/modules/reference/types/counterparty.ts",
+    "ui-forge.lock.json"
+  ],
+  "summary": {
+    "classes": 101,
+    "modules": 101,
+    "categories": {
+      "app": 2,
+      "controller": 13,
+      "model": 16,
+      "store": 15,
+      "proxy": 1,
+      "util": 8,
+      "view": 37,
+      "mixin": 1,
+      "plugin": 1,
+      "viewmodel": 2,
+      "override": 5
+    },
+    "findings": {
+      "info": 1
+    },
+    "frameworkClassesUsed": 73,
+    "frameworkAliasesUsed": 51,
+    "frameworkApisUsed": 81
+  },
+  "coverage": {
+    "classes": {
+      "used": 73,
+      "missing": []
+    },
+    "aliases": {
+      "used": 51,
+      "missing": []
+    },
+    "apis": {
+      "used": 81,
+      "missing": []
+    }
+  },
+  "loadOrder": [
+    "src/overrides/Component.ts",
+    "src/overrides/draw/Container.ts",
+    "src/overrides/form/field/Base.ts",
+    "src/overrides/form/field/Date.ts",
+    "src/overrides/grid/column/Date.ts",
+    "src/app/util/Session.ts",
+    "src/app/util/Toast.ts",
+    "src/app/util/Api.ts",
+    "src/app/util/Csv.ts",
+    "src/app/util/Format.ts",
+    "src/app/model/Lookup.ts",
+    "src/app/util/Lookups.ts",
+    "src/app/util/Screens.ts",
+    "src/app/core/BaseStore.ts",
+    "src/app/store/AuditEntries.ts",
+    "src/app/ux/form/DateRange.ts",
+    "src/app/ux/form/LookupMixin.ts",
+    "src/app/ux/form/LookupCombo.ts",
+    "src/app/util/Xlsx.ts",
+    "src/app/ux/filter/FilterPanel.ts",
+    "src/app/ux/grid/plugin/RangeFill.ts",
+    "src/app/ux/grid/BaseGrid.ts",
+    "src/app/ux/grid/column/Link.ts",
+    "src/app/ux/grid/column/Status.ts",
+    "src/app/ux/grid/GenericGrid.ts",
+    "src/app/core/BaseController.ts",
+    "src/app/ux/audit/AuditCompare.ts",
+    "src/app/ux/audit/CompareWindow.ts",
+    "src/app/view/audit/AuditTrailController.ts",
+    "src/app/view/audit/AuditTrail.ts",
+    "src/app/store/Components.ts",
+    "src/app/store/Trades.ts",
+    "src/app/ux/audit/RecentChanges.ts",
+    "src/app/ux/form/EntryForm.ts",
+    "src/app/ux/form/LookupTag.ts",
+    "src/app/ux/window/EntryWindow.ts",
+    "src/app/view/contract/ComponentWindow.ts",
+    "src/app/core/RestProxy.ts",
+    "src/app/core/BaseModel.ts",
+    "src/app/model/Component.ts",
+    "src/app/model/Contract.ts",
+    "src/app/view/contract/ContractEntryController.ts",
+    "src/app/view/contract/ContractEntryModel.ts",
+    "src/app/view/contract/ContractEntry.ts",
+    "src/app/store/Contracts.ts",
+    "src/app/view/contract/ContractSummaryController.ts",
+    "src/app/view/contract/ContractSummary.ts",
+    "src/app/store/ContractVersions.ts",
+    "src/app/view/contract/ContractVersionsController.ts",
+    "src/app/view/contract/ContractVersions.ts",
+    "src/app/view/dashboard/DashboardController.ts",
+    "src/app/view/dashboard/Dashboard.ts",
+    "src/app/store/IngestionErrors.ts",
+    "src/app/store/IngestionJobs.ts",
+    "src/app/view/ingestion/DataIngestionController.ts",
+    "src/app/view/ingestion/DataIngestion.ts",
+    "src/app/view/main/MainController.ts",
+    "src/app/view/main/MainModel.ts",
+    "src/app/view/main/Main.ts",
+    "src/app/ux/panel/MasterDetail.ts",
+    "src/app/model/Commodity.ts",
+    "src/app/store/Commodities.ts",
+    "src/app/view/reference/Commodities.ts",
+    "src/app/model/Counterparty.ts",
+    "src/app/store/Counterparties.ts",
+    "src/app/view/reference/Counterparties.ts",
+    "src/app/model/LegalEntity.ts",
+    "src/app/store/LegalEntities.ts",
+    "src/app/view/reference/LegalEntities.ts",
+    "src/app/view/reference/ReferenceWindow.ts",
+    "src/app/store/IntervalValues.ts",
+    "src/app/ux/grid/IntervalGrid.ts",
+    "src/app/model/TimeSeries.ts",
+    "src/app/view/timeseries/TimeSeriesDataController.ts",
+    "src/app/view/timeseries/TimeSeriesData.ts",
+    "src/app/store/TimeSeries.ts",
+    "src/app/view/timeseries/TimeSeriesSummaryController.ts",
+    "src/app/view/timeseries/TimeSeriesWindow.ts",
+    "src/app/view/timeseries/TimeSeriesSummary.ts",
+    "src/app/model/Trade.ts",
+    "src/app/view/trade/TradeBlotterController.ts",
+    "src/app/view/trade/TradeWindow.ts",
+    "src/app/view/trade/TradeBlotter.ts",
+    "src/app/store/usermanagement/Roles.ts",
+    "src/app/model/usermanagement/Role.ts",
+    "src/app/view/usermanagement/role/RoleListController.ts",
+    "src/app/view/usermanagement/role/PermissionMatrix.ts",
+    "src/app/view/usermanagement/role/RoleWindow.ts",
+    "src/app/view/usermanagement/role/RoleList.ts",
+    "src/app/store/usermanagement/Users.ts",
+    "src/app/model/usermanagement/User.ts",
+    "src/app/view/usermanagement/user/UserListController.ts",
+    "src/app/view/usermanagement/user/UserWindow.ts",
+    "src/app/view/usermanagement/user/UserList.ts",
+    "src/app/Application.ts",
+    "src/app/model/AuditEntry.ts",
+    "src/app/model/ContractVersion.ts",
+    "src/app/model/IngestionError.ts",
+    "src/app/model/IngestionJob.ts",
+    "src/app/model/IntervalValue.ts",
+    "src/app.ts"
+  ],
+  "lazyScreens": {
+    "gt-audittrail": [
+      "src/app/view/audit/AuditTrailController.ts",
+      "src/app/view/audit/AuditTrail.ts"
+    ],
+    "gt-commodities": [
+      "src/app/view/reference/Commodities.ts"
+    ],
+    "gt-componentwindow": [
+      "src/app/view/contract/ComponentWindow.ts"
+    ],
+    "gt-contractentry": [
+      "src/app/view/contract/ComponentWindow.ts",
+      "src/app/view/contract/ContractEntryController.ts",
+      "src/app/view/contract/ContractEntryModel.ts",
+      "src/app/view/contract/ContractEntry.ts"
+    ],
+    "gt-contractsummary": [
+      "src/app/view/contract/ContractSummaryController.ts",
+      "src/app/view/contract/ContractSummary.ts"
+    ],
+    "gt-contractversions": [
+      "src/app/view/contract/ContractVersionsController.ts",
+      "src/app/view/contract/ContractVersions.ts"
+    ],
+    "gt-counterparties": [
+      "src/app/view/reference/Counterparties.ts"
+    ],
+    "gt-dashboard": [
+      "src/app/view/dashboard/DashboardController.ts",
+      "src/app/view/dashboard/Dashboard.ts"
+    ],
+    "gt-dataingestion": [
+      "src/app/view/ingestion/DataIngestionController.ts",
+      "src/app/view/ingestion/DataIngestion.ts"
+    ],
+    "gt-legalentities": [
+      "src/app/view/reference/LegalEntities.ts"
+    ],
+    "gt-main": [
+      "src/app/view/main/MainController.ts",
+      "src/app/view/main/MainModel.ts",
+      "src/app/view/main/Main.ts"
+    ],
+    "gt-permissionmatrix": [
+      "src/app/view/usermanagement/role/PermissionMatrix.ts"
+    ],
+    "gt-referencewindow": [
+      "src/app/view/reference/Commodities.ts",
+      "src/app/view/reference/Counterparties.ts",
+      "src/app/view/reference/LegalEntities.ts",
+      "src/app/view/reference/ReferenceWindow.ts"
+    ],
+    "gt-rolelist": [
+      "src/app/view/usermanagement/role/RoleListController.ts",
+      "src/app/view/usermanagement/role/PermissionMatrix.ts",
+      "src/app/view/usermanagement/role/RoleWindow.ts",
+      "src/app/view/usermanagement/role/RoleList.ts"
+    ],
+    "gt-rolewindow": [
+      "src/app/view/usermanagement/role/PermissionMatrix.ts",
+      "src/app/view/usermanagement/role/RoleWindow.ts"
+    ],
+    "gt-timeseriesdata": [
+      "src/app/view/timeseries/TimeSeriesDataController.ts",
+      "src/app/view/timeseries/TimeSeriesData.ts"
+    ],
+    "gt-timeseriessummary": [
+      "src/app/view/timeseries/TimeSeriesSummaryController.ts",
+      "src/app/view/timeseries/TimeSeriesWindow.ts",
+      "src/app/view/timeseries/TimeSeriesSummary.ts"
+    ],
+    "gt-timeserieswindow": [
+      "src/app/view/timeseries/TimeSeriesWindow.ts"
+    ],
+    "gt-tradeblotter": [
+      "src/app/view/trade/TradeBlotterController.ts",
+      "src/app/view/trade/TradeWindow.ts",
+      "src/app/view/trade/TradeBlotter.ts"
+    ],
+    "gt-tradewindow": [
+      "src/app/view/trade/TradeWindow.ts"
+    ],
+    "gt-userlist": [
+      "src/app/view/usermanagement/user/UserListController.ts",
+      "src/app/view/usermanagement/user/UserWindow.ts",
+      "src/app/view/usermanagement/user/UserList.ts"
+    ],
+    "gt-userwindow": [
+      "src/app/view/usermanagement/user/UserWindow.ts"
+    ]
+  },
+  "classes": [
+    {
+      "name": "GT.$application",
+      "category": "app",
+      "kind": "application",
+      "extends": "GT.Application",
+      "frameworkBase": "Ext.app.Application",
+      "aliases": [],
+      "source": "app.js",
+      "module": "src/app.ts"
+    },
+    {
+      "name": "GT.Application",
+      "category": "app",
+      "kind": "define",
+      "extends": "Ext.app.Application",
+      "frameworkBase": "Ext.app.Application",
+      "aliases": [],
+      "source": "app/Application.js",
+      "module": "src/app/Application.ts"
+    },
+    {
+      "name": "GT.core.BaseController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "Ext.app.ViewController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.gt-base"
+      ],
+      "source": "app/core/BaseController.js",
+      "module": "src/app/core/BaseController.ts"
+    },
+    {
+      "name": "GT.core.BaseModel",
+      "category": "model",
+      "kind": "define",
+      "extends": "Ext.data.Model",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/core/BaseModel.js",
+      "module": "src/app/core/BaseModel.ts"
+    },
+    {
+      "name": "GT.core.BaseStore",
+      "category": "store",
+      "kind": "define",
+      "extends": "Ext.data.Store",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [],
+      "source": "app/core/BaseStore.js",
+      "module": "src/app/core/BaseStore.ts"
+    },
+    {
+      "name": "GT.core.RestProxy",
+      "category": "proxy",
+      "kind": "define",
+      "extends": "Ext.data.proxy.Rest",
+      "frameworkBase": "Ext.data.proxy.Rest",
+      "aliases": [
+        "proxy.gt-rest"
+      ],
+      "source": "app/core/RestProxy.js",
+      "module": "src/app/core/RestProxy.ts"
+    },
+    {
+      "name": "GT.model.AuditEntry",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/AuditEntry.js",
+      "module": "src/app/model/AuditEntry.ts"
+    },
+    {
+      "name": "GT.model.Commodity",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/Commodity.js",
+      "module": "src/app/model/Commodity.ts"
+    },
+    {
+      "name": "GT.model.Component",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/Component.js",
+      "module": "src/app/model/Component.ts"
+    },
+    {
+      "name": "GT.model.Contract",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/Contract.js",
+      "module": "src/app/model/Contract.ts"
+    },
+    {
+      "name": "GT.model.ContractVersion",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/ContractVersion.js",
+      "module": "src/app/model/ContractVersion.ts"
+    },
+    {
+      "name": "GT.model.Counterparty",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/Counterparty.js",
+      "module": "src/app/model/Counterparty.ts"
+    },
+    {
+      "name": "GT.model.IngestionError",
+      "category": "model",
+      "kind": "define",
+      "extends": "Ext.data.Model",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/IngestionError.js",
+      "module": "src/app/model/IngestionError.ts"
+    },
+    {
+      "name": "GT.model.IngestionJob",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/IngestionJob.js",
+      "module": "src/app/model/IngestionJob.ts"
+    },
+    {
+      "name": "GT.model.IntervalValue",
+      "category": "model",
+      "kind": "define",
+      "extends": "Ext.data.Model",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/IntervalValue.js",
+      "module": "src/app/model/IntervalValue.ts"
+    },
+    {
+      "name": "GT.model.LegalEntity",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/LegalEntity.js",
+      "module": "src/app/model/LegalEntity.ts"
+    },
+    {
+      "name": "GT.model.Lookup",
+      "category": "model",
+      "kind": "define",
+      "extends": "Ext.data.Model",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/Lookup.js",
+      "module": "src/app/model/Lookup.ts"
+    },
+    {
+      "name": "GT.model.TimeSeries",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/TimeSeries.js",
+      "module": "src/app/model/TimeSeries.ts"
+    },
+    {
+      "name": "GT.model.Trade",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/Trade.js",
+      "module": "src/app/model/Trade.ts"
+    },
+    {
+      "name": "GT.model.usermanagement.Role",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/usermanagement/Role.js",
+      "module": "src/app/model/usermanagement/Role.ts"
+    },
+    {
+      "name": "GT.model.usermanagement.User",
+      "category": "model",
+      "kind": "define",
+      "extends": "GT.core.BaseModel",
+      "frameworkBase": "Ext.data.Model",
+      "aliases": [],
+      "source": "app/model/usermanagement/User.js",
+      "module": "src/app/model/usermanagement/User.ts"
+    },
+    {
+      "name": "GT.overrides.Component",
+      "category": "override",
+      "kind": "override",
+      "extends": "Ext.Component",
+      "frameworkBase": "Ext.Component",
+      "aliases": [],
+      "source": "overrides/Component.js",
+      "module": "src/overrides/Component.ts"
+    },
+    {
+      "name": "GT.overrides.draw.Container",
+      "category": "override",
+      "kind": "override",
+      "extends": "Ext.draw.Container",
+      "frameworkBase": "Ext.draw.Container",
+      "aliases": [],
+      "source": "overrides/draw/Container.js",
+      "module": "src/overrides/draw/Container.ts"
+    },
+    {
+      "name": "GT.overrides.form.field.Base",
+      "category": "override",
+      "kind": "override",
+      "extends": "Ext.form.field.Base",
+      "frameworkBase": "Ext.form.field.Base",
+      "aliases": [],
+      "source": "overrides/form/field/Base.js",
+      "module": "src/overrides/form/field/Base.ts"
+    },
+    {
+      "name": "GT.overrides.form.field.Date",
+      "category": "override",
+      "kind": "override",
+      "extends": "Ext.form.field.Date",
+      "frameworkBase": "Ext.form.field.Date",
+      "aliases": [],
+      "source": "overrides/form/field/Date.js",
+      "module": "src/overrides/form/field/Date.ts"
+    },
+    {
+      "name": "GT.overrides.grid.column.Date",
+      "category": "override",
+      "kind": "override",
+      "extends": "Ext.grid.column.Date",
+      "frameworkBase": "Ext.grid.column.Date",
+      "aliases": [],
+      "source": "overrides/grid/column/Date.js",
+      "module": "src/overrides/grid/column/Date.ts"
+    },
+    {
+      "name": "GT.store.AuditEntries",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-audit"
+      ],
+      "source": "app/store/AuditEntries.js",
+      "module": "src/app/store/AuditEntries.ts"
+    },
+    {
+      "name": "GT.store.Commodities",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-commodities"
+      ],
+      "source": "app/store/Commodities.js",
+      "module": "src/app/store/Commodities.ts"
+    },
+    {
+      "name": "GT.store.Components",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-components"
+      ],
+      "source": "app/store/Components.js",
+      "module": "src/app/store/Components.ts"
+    },
+    {
+      "name": "GT.store.ContractVersions",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-versions"
+      ],
+      "source": "app/store/ContractVersions.js",
+      "module": "src/app/store/ContractVersions.ts"
+    },
+    {
+      "name": "GT.store.Contracts",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-contracts"
+      ],
+      "source": "app/store/Contracts.js",
+      "module": "src/app/store/Contracts.ts"
+    },
+    {
+      "name": "GT.store.Counterparties",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-counterparties"
+      ],
+      "source": "app/store/Counterparties.js",
+      "module": "src/app/store/Counterparties.ts"
+    },
+    {
+      "name": "GT.store.IngestionErrors",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-ingestionerrors"
+      ],
+      "source": "app/store/IngestionErrors.js",
+      "module": "src/app/store/IngestionErrors.ts"
+    },
+    {
+      "name": "GT.store.IngestionJobs",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-ingestionjobs"
+      ],
+      "source": "app/store/IngestionJobs.js",
+      "module": "src/app/store/IngestionJobs.ts"
+    },
+    {
+      "name": "GT.store.IntervalValues",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-intervals"
+      ],
+      "source": "app/store/IntervalValues.js",
+      "module": "src/app/store/IntervalValues.ts"
+    },
+    {
+      "name": "GT.store.LegalEntities",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-legalentities"
+      ],
+      "source": "app/store/LegalEntities.js",
+      "module": "src/app/store/LegalEntities.ts"
+    },
+    {
+      "name": "GT.store.TimeSeries",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-timeseries"
+      ],
+      "source": "app/store/TimeSeries.js",
+      "module": "src/app/store/TimeSeries.ts"
+    },
+    {
+      "name": "GT.store.Trades",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-trades"
+      ],
+      "source": "app/store/Trades.js",
+      "module": "src/app/store/Trades.ts"
+    },
+    {
+      "name": "GT.store.usermanagement.Roles",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-roles"
+      ],
+      "source": "app/store/usermanagement/Roles.js",
+      "module": "src/app/store/usermanagement/Roles.ts"
+    },
+    {
+      "name": "GT.store.usermanagement.Users",
+      "category": "store",
+      "kind": "define",
+      "extends": "GT.core.BaseStore",
+      "frameworkBase": "Ext.data.Store",
+      "aliases": [
+        "store.gt-users"
+      ],
+      "source": "app/store/usermanagement/Users.js",
+      "module": "src/app/store/usermanagement/Users.ts"
+    },
+    {
+      "name": "GT.util.Api",
+      "category": "util",
+      "kind": "define",
+      "extends": null,
+      "frameworkBase": "Ext.Base",
+      "aliases": [],
+      "source": "app/util/Api.js",
+      "module": "src/app/util/Api.ts"
+    },
+    {
+      "name": "GT.util.Csv",
+      "category": "util",
+      "kind": "define",
+      "extends": null,
+      "frameworkBase": "Ext.Base",
+      "aliases": [],
+      "source": "app/util/Csv.js",
+      "module": "src/app/util/Csv.ts"
+    },
+    {
+      "name": "GT.util.Format",
+      "category": "util",
+      "kind": "define",
+      "extends": null,
+      "frameworkBase": "Ext.Base",
+      "aliases": [],
+      "source": "app/util/Format.js",
+      "module": "src/app/util/Format.ts"
+    },
+    {
+      "name": "GT.util.Lookups",
+      "category": "util",
+      "kind": "define",
+      "extends": null,
+      "frameworkBase": "Ext.Base",
+      "aliases": [],
+      "source": "app/util/Lookups.js",
+      "module": "src/app/util/Lookups.ts"
+    },
+    {
+      "name": "GT.util.Screens",
+      "category": "util",
+      "kind": "define",
+      "extends": null,
+      "frameworkBase": "Ext.Base",
+      "aliases": [],
+      "source": "app/util/Screens.js",
+      "module": "src/app/util/Screens.ts"
+    },
+    {
+      "name": "GT.util.Session",
+      "category": "util",
+      "kind": "define",
+      "extends": null,
+      "frameworkBase": "Ext.Base",
+      "aliases": [],
+      "source": "app/util/Session.js",
+      "module": "src/app/util/Session.ts"
+    },
+    {
+      "name": "GT.util.Toast",
+      "category": "util",
+      "kind": "define",
+      "extends": null,
+      "frameworkBase": "Ext.Base",
+      "aliases": [],
+      "source": "app/util/Toast.js",
+      "module": "src/app/util/Toast.ts"
+    },
+    {
+      "name": "GT.util.Xlsx",
+      "category": "util",
+      "kind": "define",
+      "extends": null,
+      "frameworkBase": "Ext.Base",
+      "aliases": [],
+      "source": "app/util/Xlsx.js",
+      "module": "src/app/util/Xlsx.ts"
+    },
+    {
+      "name": "GT.ux.audit.AuditCompare",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.grid.Panel",
+      "frameworkBase": "Ext.grid.Panel",
+      "aliases": [
+        "widget.gt-auditcompare"
+      ],
+      "source": "app/ux/audit/AuditCompare.js",
+      "module": "src/app/ux/audit/AuditCompare.ts"
+    },
+    {
+      "name": "GT.ux.audit.CompareWindow",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.window.Window",
+      "frameworkBase": "Ext.window.Window",
+      "aliases": [
+        "widget.gt-comparewindow"
+      ],
+      "source": "app/ux/audit/CompareWindow.js",
+      "module": "src/app/ux/audit/CompareWindow.ts"
+    },
+    {
+      "name": "GT.ux.audit.RecentChanges",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.grid.Panel",
+      "frameworkBase": "Ext.grid.Panel",
+      "aliases": [
+        "widget.gt-recentchanges"
+      ],
+      "source": "app/ux/audit/RecentChanges.js",
+      "module": "src/app/ux/audit/RecentChanges.ts"
+    },
+    {
+      "name": "GT.ux.filter.FilterPanel",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.form.Panel",
+      "frameworkBase": "Ext.form.Panel",
+      "aliases": [
+        "widget.gt-filterpanel"
+      ],
+      "source": "app/ux/filter/FilterPanel.js",
+      "module": "src/app/ux/filter/FilterPanel.ts"
+    },
+    {
+      "name": "GT.ux.form.DateRange",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.form.FieldContainer",
+      "frameworkBase": "Ext.form.FieldContainer",
+      "aliases": [
+        "widget.gt-daterange"
+      ],
+      "source": "app/ux/form/DateRange.js",
+      "module": "src/app/ux/form/DateRange.ts"
+    },
+    {
+      "name": "GT.ux.form.EntryForm",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.form.Panel",
+      "frameworkBase": "Ext.form.Panel",
+      "aliases": [
+        "widget.gt-entryform"
+      ],
+      "source": "app/ux/form/EntryForm.js",
+      "module": "src/app/ux/form/EntryForm.ts"
+    },
+    {
+      "name": "GT.ux.form.LookupCombo",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.form.field.ComboBox",
+      "frameworkBase": "Ext.form.field.ComboBox",
+      "aliases": [
+        "widget.gt-lookup"
+      ],
+      "source": "app/ux/form/LookupCombo.js",
+      "module": "src/app/ux/form/LookupCombo.ts"
+    },
+    {
+      "name": "GT.ux.form.LookupMixin",
+      "category": "mixin",
+      "kind": "define",
+      "extends": "Ext.Mixin",
+      "frameworkBase": "Ext.Mixin",
+      "aliases": [],
+      "source": "app/ux/form/LookupMixin.js",
+      "module": "src/app/ux/form/LookupMixin.ts"
+    },
+    {
+      "name": "GT.ux.form.LookupTag",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.form.field.Tag",
+      "frameworkBase": "Ext.form.field.Tag",
+      "aliases": [
+        "widget.gt-lookuptag"
+      ],
+      "source": "app/ux/form/LookupTag.js",
+      "module": "src/app/ux/form/LookupTag.ts"
+    },
+    {
+      "name": "GT.ux.grid.BaseGrid",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.grid.Panel",
+      "frameworkBase": "Ext.grid.Panel",
+      "aliases": [
+        "widget.gt-basegrid"
+      ],
+      "source": "app/ux/grid/BaseGrid.js",
+      "module": "src/app/ux/grid/BaseGrid.ts"
+    },
+    {
+      "name": "GT.ux.grid.GenericGrid",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.grid.BaseGrid",
+      "frameworkBase": "Ext.grid.Panel",
+      "aliases": [
+        "widget.gt-genericgrid"
+      ],
+      "source": "app/ux/grid/GenericGrid.js",
+      "module": "src/app/ux/grid/GenericGrid.ts"
+    },
+    {
+      "name": "GT.ux.grid.IntervalGrid",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.grid.GenericGrid",
+      "frameworkBase": "Ext.grid.Panel",
+      "aliases": [
+        "widget.gt-intervalgrid"
+      ],
+      "source": "app/ux/grid/IntervalGrid.js",
+      "module": "src/app/ux/grid/IntervalGrid.ts"
+    },
+    {
+      "name": "GT.ux.grid.column.Link",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.grid.column.Column",
+      "frameworkBase": "Ext.grid.column.Column",
+      "aliases": [
+        "widget.gt-linkcolumn"
+      ],
+      "source": "app/ux/grid/column/Link.js",
+      "module": "src/app/ux/grid/column/Link.ts"
+    },
+    {
+      "name": "GT.ux.grid.column.Status",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.grid.column.Column",
+      "frameworkBase": "Ext.grid.column.Column",
+      "aliases": [
+        "widget.gt-statuscolumn"
+      ],
+      "source": "app/ux/grid/column/Status.js",
+      "module": "src/app/ux/grid/column/Status.ts"
+    },
+    {
+      "name": "GT.ux.grid.plugin.RangeFill",
+      "category": "plugin",
+      "kind": "define",
+      "extends": "Ext.plugin.Abstract",
+      "frameworkBase": "Ext.plugin.Abstract",
+      "aliases": [
+        "plugin.gt-rangefill"
+      ],
+      "source": "app/ux/grid/plugin/RangeFill.js",
+      "module": "src/app/ux/grid/plugin/RangeFill.ts"
+    },
+    {
+      "name": "GT.ux.panel.MasterDetail",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-masterdetail"
+      ],
+      "source": "app/ux/panel/MasterDetail.js",
+      "module": "src/app/ux/panel/MasterDetail.ts"
+    },
+    {
+      "name": "GT.ux.window.EntryWindow",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.window.Window",
+      "frameworkBase": "Ext.window.Window",
+      "aliases": [
+        "widget.gt-entrywindow"
+      ],
+      "source": "app/ux/window/EntryWindow.js",
+      "module": "src/app/ux/window/EntryWindow.ts"
+    },
+    {
+      "name": "GT.view.audit.AuditTrail",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-audittrail"
+      ],
+      "source": "app/view/audit/AuditTrail.js",
+      "module": "src/app/view/audit/AuditTrail.ts"
+    },
+    {
+      "name": "GT.view.audit.AuditTrailController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.audittrail"
+      ],
+      "source": "app/view/audit/AuditTrailController.js",
+      "module": "src/app/view/audit/AuditTrailController.ts"
+    },
+    {
+      "name": "GT.view.contract.ComponentWindow",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.window.EntryWindow",
+      "frameworkBase": "Ext.window.Window",
+      "aliases": [
+        "widget.gt-componentwindow"
+      ],
+      "source": "app/view/contract/ComponentWindow.js",
+      "module": "src/app/view/contract/ComponentWindow.ts"
+    },
+    {
+      "name": "GT.view.contract.ContractEntry",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-contractentry"
+      ],
+      "source": "app/view/contract/ContractEntry.js",
+      "module": "src/app/view/contract/ContractEntry.ts"
+    },
+    {
+      "name": "GT.view.contract.ContractEntryController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.contractentry"
+      ],
+      "source": "app/view/contract/ContractEntryController.js",
+      "module": "src/app/view/contract/ContractEntryController.ts"
+    },
+    {
+      "name": "GT.view.contract.ContractEntryModel",
+      "category": "viewmodel",
+      "kind": "define",
+      "extends": "Ext.app.ViewModel",
+      "frameworkBase": "Ext.app.ViewModel",
+      "aliases": [
+        "viewmodel.contractentry"
+      ],
+      "source": "app/view/contract/ContractEntryModel.js",
+      "module": "src/app/view/contract/ContractEntryModel.ts"
+    },
+    {
+      "name": "GT.view.contract.ContractSummary",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-contractsummary"
+      ],
+      "source": "app/view/contract/ContractSummary.js",
+      "module": "src/app/view/contract/ContractSummary.ts"
+    },
+    {
+      "name": "GT.view.contract.ContractSummaryController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.contractsummary"
+      ],
+      "source": "app/view/contract/ContractSummaryController.js",
+      "module": "src/app/view/contract/ContractSummaryController.ts"
+    },
+    {
+      "name": "GT.view.contract.ContractVersions",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-contractversions"
+      ],
+      "source": "app/view/contract/ContractVersions.js",
+      "module": "src/app/view/contract/ContractVersions.ts"
+    },
+    {
+      "name": "GT.view.contract.ContractVersionsController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.contractversions"
+      ],
+      "source": "app/view/contract/ContractVersionsController.js",
+      "module": "src/app/view/contract/ContractVersionsController.ts"
+    },
+    {
+      "name": "GT.view.dashboard.Dashboard",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.container.Container",
+      "frameworkBase": "Ext.container.Container",
+      "aliases": [
+        "widget.gt-dashboard"
+      ],
+      "source": "app/view/dashboard/Dashboard.js",
+      "module": "src/app/view/dashboard/Dashboard.ts"
+    },
+    {
+      "name": "GT.view.dashboard.DashboardController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.dashboard"
+      ],
+      "source": "app/view/dashboard/DashboardController.js",
+      "module": "src/app/view/dashboard/DashboardController.ts"
+    },
+    {
+      "name": "GT.view.ingestion.DataIngestion",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-dataingestion"
+      ],
+      "source": "app/view/ingestion/DataIngestion.js",
+      "module": "src/app/view/ingestion/DataIngestion.ts"
+    },
+    {
+      "name": "GT.view.ingestion.DataIngestionController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.dataingestion"
+      ],
+      "source": "app/view/ingestion/DataIngestionController.js",
+      "module": "src/app/view/ingestion/DataIngestionController.ts"
+    },
+    {
+      "name": "GT.view.main.Main",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.container.Viewport",
+      "frameworkBase": "Ext.container.Viewport",
+      "aliases": [
+        "widget.gt-main"
+      ],
+      "source": "app/view/main/Main.js",
+      "module": "src/app/view/main/Main.ts"
+    },
+    {
+      "name": "GT.view.main.MainController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.main"
+      ],
+      "source": "app/view/main/MainController.js",
+      "module": "src/app/view/main/MainController.ts"
+    },
+    {
+      "name": "GT.view.main.MainModel",
+      "category": "viewmodel",
+      "kind": "define",
+      "extends": "Ext.app.ViewModel",
+      "frameworkBase": "Ext.app.ViewModel",
+      "aliases": [
+        "viewmodel.main"
+      ],
+      "source": "app/view/main/MainModel.js",
+      "module": "src/app/view/main/MainModel.ts"
+    },
+    {
+      "name": "GT.view.reference.Commodities",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.panel.MasterDetail",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-commodities"
+      ],
+      "source": "app/view/reference/Commodities.js",
+      "module": "src/app/view/reference/Commodities.ts"
+    },
+    {
+      "name": "GT.view.reference.Counterparties",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.panel.MasterDetail",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-counterparties"
+      ],
+      "source": "app/view/reference/Counterparties.js",
+      "module": "src/app/view/reference/Counterparties.ts"
+    },
+    {
+      "name": "GT.view.reference.LegalEntities",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.panel.MasterDetail",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-legalentities"
+      ],
+      "source": "app/view/reference/LegalEntities.js",
+      "module": "src/app/view/reference/LegalEntities.ts"
+    },
+    {
+      "name": "GT.view.reference.ReferenceWindow",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.window.EntryWindow",
+      "frameworkBase": "Ext.window.Window",
+      "aliases": [
+        "widget.gt-referencewindow"
+      ],
+      "source": "app/view/reference/ReferenceWindow.js",
+      "module": "src/app/view/reference/ReferenceWindow.ts"
+    },
+    {
+      "name": "GT.view.timeseries.TimeSeriesData",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-timeseriesdata"
+      ],
+      "source": "app/view/timeseries/TimeSeriesData.js",
+      "module": "src/app/view/timeseries/TimeSeriesData.ts"
+    },
+    {
+      "name": "GT.view.timeseries.TimeSeriesDataController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.timeseriesdata"
+      ],
+      "source": "app/view/timeseries/TimeSeriesDataController.js",
+      "module": "src/app/view/timeseries/TimeSeriesDataController.ts"
+    },
+    {
+      "name": "GT.view.timeseries.TimeSeriesSummary",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.grid.GenericGrid",
+      "frameworkBase": "Ext.grid.Panel",
+      "aliases": [
+        "widget.gt-timeseriessummary"
+      ],
+      "source": "app/view/timeseries/TimeSeriesSummary.js",
+      "module": "src/app/view/timeseries/TimeSeriesSummary.ts"
+    },
+    {
+      "name": "GT.view.timeseries.TimeSeriesSummaryController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.timeseriessummary"
+      ],
+      "source": "app/view/timeseries/TimeSeriesSummaryController.js",
+      "module": "src/app/view/timeseries/TimeSeriesSummaryController.ts"
+    },
+    {
+      "name": "GT.view.timeseries.TimeSeriesWindow",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.window.EntryWindow",
+      "frameworkBase": "Ext.window.Window",
+      "aliases": [
+        "widget.gt-timeserieswindow"
+      ],
+      "source": "app/view/timeseries/TimeSeriesWindow.js",
+      "module": "src/app/view/timeseries/TimeSeriesWindow.ts"
+    },
+    {
+      "name": "GT.view.trade.TradeBlotter",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-tradeblotter"
+      ],
+      "source": "app/view/trade/TradeBlotter.js",
+      "module": "src/app/view/trade/TradeBlotter.ts"
+    },
+    {
+      "name": "GT.view.trade.TradeBlotterController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.tradeblotter"
+      ],
+      "source": "app/view/trade/TradeBlotterController.js",
+      "module": "src/app/view/trade/TradeBlotterController.ts"
+    },
+    {
+      "name": "GT.view.trade.TradeWindow",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.window.EntryWindow",
+      "frameworkBase": "Ext.window.Window",
+      "aliases": [
+        "widget.gt-tradewindow"
+      ],
+      "source": "app/view/trade/TradeWindow.js",
+      "module": "src/app/view/trade/TradeWindow.ts"
+    },
+    {
+      "name": "GT.view.usermanagement.role.PermissionMatrix",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.grid.Panel",
+      "frameworkBase": "Ext.grid.Panel",
+      "aliases": [
+        "widget.gt-permissionmatrix"
+      ],
+      "source": "app/view/usermanagement/role/PermissionMatrix.js",
+      "module": "src/app/view/usermanagement/role/PermissionMatrix.ts"
+    },
+    {
+      "name": "GT.view.usermanagement.role.RoleList",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-rolelist"
+      ],
+      "source": "app/view/usermanagement/role/RoleList.js",
+      "module": "src/app/view/usermanagement/role/RoleList.ts"
+    },
+    {
+      "name": "GT.view.usermanagement.role.RoleListController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.rolelist"
+      ],
+      "source": "app/view/usermanagement/role/RoleListController.js",
+      "module": "src/app/view/usermanagement/role/RoleListController.ts"
+    },
+    {
+      "name": "GT.view.usermanagement.role.RoleWindow",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.window.EntryWindow",
+      "frameworkBase": "Ext.window.Window",
+      "aliases": [
+        "widget.gt-rolewindow"
+      ],
+      "source": "app/view/usermanagement/role/RoleWindow.js",
+      "module": "src/app/view/usermanagement/role/RoleWindow.ts"
+    },
+    {
+      "name": "GT.view.usermanagement.user.UserList",
+      "category": "view",
+      "kind": "define",
+      "extends": "Ext.panel.Panel",
+      "frameworkBase": "Ext.panel.Panel",
+      "aliases": [
+        "widget.gt-userlist"
+      ],
+      "source": "app/view/usermanagement/user/UserList.js",
+      "module": "src/app/view/usermanagement/user/UserList.ts"
+    },
+    {
+      "name": "GT.view.usermanagement.user.UserListController",
+      "category": "controller",
+      "kind": "define",
+      "extends": "GT.core.BaseController",
+      "frameworkBase": "Ext.app.ViewController",
+      "aliases": [
+        "controller.userlist"
+      ],
+      "source": "app/view/usermanagement/user/UserListController.js",
+      "module": "src/app/view/usermanagement/user/UserListController.ts"
+    },
+    {
+      "name": "GT.view.usermanagement.user.UserWindow",
+      "category": "view",
+      "kind": "define",
+      "extends": "GT.ux.window.EntryWindow",
+      "frameworkBase": "Ext.window.Window",
+      "aliases": [
+        "widget.gt-userwindow"
+      ],
+      "source": "app/view/usermanagement/user/UserWindow.js",
+      "module": "src/app/view/usermanagement/user/UserWindow.ts"
+    }
+  ],
+  "findings": [
+    {
+      "level": "info",
+      "code": "top-level-code",
+      "message": "1 statement(s) outside Ext.define",
+      "file": "app.js"
+    }
+  ],
+  "llm": [],
+  "typecheckRelaxed": [
+    "src/app/util/Api.ts",
+    "src/app/ux/audit/AuditCompare.ts",
+    "src/app/core/BaseModel.ts",
+    "src/app/view/main/MainController.ts"
+  ],
+  "verify": {
+    "ok": true,
+    "steps": [
+      {
+        "name": "install",
+        "ok": true,
+        "skipped": false,
+        "command": "npm install",
+        "output": "\nadded 50 packages in 2m\nnpm warn install-scripts 2 packages have install scripts not yet covered by allowScripts:\nnpm warn install-scripts   @fortawesome/fontawesome-free@5.15.4 (postinstall: node attribution.js)\nnpm warn install-scripts   esbuild@0.21.5 (postinstall: node install.js)\nnpm warn install-scripts\nnpm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.\n"
+      },
+      {
+        "name": "typecheck",
+        "ok": true,
+        "skipped": false,
+        "command": "tsc --noEmit",
+        "output": ""
+      },
+      {
+        "name": "build",
+        "ok": true,
+        "skipped": false,
+        "command": "vite build",
+        "output": " \u2502 gzip:   2.28 kB\u001b[22m\u001b[2m \u2502 map:    13.25 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/gt-dashboard-BnAClmqx.js                          \u001b[39m\u001b[1m\u001b[2m    5.55 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.24 kB\u001b[22m\u001b[2m \u2502 map:    13.32 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/MasterSlave-DjuAZDWR.js                           \u001b[39m\u001b[1m\u001b[2m    6.40 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.63 kB\u001b[22m\u001b[2m \u2502 map:    20.99 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/gt-timeseriesdata-CqBJvLYb.js                     \u001b[39m\u001b[1m\u001b[2m    6.54 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.66 kB\u001b[22m\u001b[2m \u2502 map:    17.68 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/gt-tradeblotter-twORRPtS.js                       \u001b[39m\u001b[1m\u001b[2m    8.49 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   2.91 kB\u001b[22m\u001b[2m \u2502 map:    20.71 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/gt-main-Dk6Z9lLn.js                               \u001b[39m\u001b[1m\u001b[2m   10.24 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   3.81 kB\u001b[22m\u001b[2m \u2502 map:    26.75 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/gt-contractentry-BOigwviB.js                      \u001b[39m\u001b[1m\u001b[2m   15.04 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   4.85 kB\u001b[22m\u001b[2m \u2502 map:    37.83 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/EntryForm-cy5opbU0.js                             \u001b[39m\u001b[1m\u001b[2m   19.88 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:   7.01 kB\u001b[22m\u001b[2m \u2502 map:    62.54 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/browser-CD5dHdWe.js                               \u001b[39m\u001b[1m\u001b[2m   71.74 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip:  19.98 kB\u001b[22m\u001b[2m \u2502 map:   394.87 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-B6JEIrGf.js                                 \u001b[39m\u001b[1m\u001b[2m  731.65 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip: 213.22 kB\u001b[22m\u001b[2m \u2502 map: 2,076.70 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/SummaryDisplay-D67C0Vhp.js                        \u001b[39m\u001b[1m\u001b[2m1,264.41 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u2502 gzip: 356.03 kB\u001b[22m\u001b[2m \u2502 map: 4,531.49 kB\u001b[22m\n\u001b[32m\u2713 built in 26.52s\u001b[39m\nnode_modules/@extreact/runtime/dist/util/format.js (154:55): Use of eval in \"node_modules/@extreact/runtime/dist/util/format.js\" is strongly discouraged as it poses security risks and may cause issues with minification.\n"
+      }
+    ],
+    "errorsByModule": {}
+  },
+  "nextSteps": [
+    "Start the display registry (display-registry) and register registration/*.manifest.json with agentctl display register; the menu comes from there.",
+    "Run the app: API_TARGET=http://host:port REGISTRY_TARGET=http://host:8130 npm run dev, sign in, walk every screen.",
+    "Read docs/DEVELOPER-GUIDE.md: where everything is, how a display is registered and how to add one.",
+    "Keep the Ext-style code, or rewrite a screen as a template / React display when you want to; each module is independent."
+  ]
+}

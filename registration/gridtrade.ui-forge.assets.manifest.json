@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "app": "gridtrade",
+  "module": {
+    "id": "gridtrade.ui-forge.assets",
+    "version": "1.0.3",
+    "title": "Assets (UI Forge)",
+    "owner": "UI Forge"
+  },
+  "displays": [
+    {
+      "id": "assets.asset-outages",
+      "title": "Asset Outages",
+      "type": "master-slave",
+      "key": "AssetOutageMasterSlave",
+      "route": "assets/asset-outages",
+      "icon": "x-fa fa-plug",
+      "requiredPermissions": [
+        "assets.view"
+      ],
+      "actionPermissions": {
+        "create": "assets.edit",
+        "delete": "assets.delete",
+        "detail-create": "assets.edit",
+        "detail-delete": "assets.delete",
+        "detail-update": "assets.edit",
+        "update": "assets.edit"
+      },
+      "config": {
+        "generatedBy": "ui-forge"
+      }
+    },
+    {
+      "id": "assets.generation-asset",
+      "title": "Generation Asset",
+      "type": "entry-form",
+      "key": "GenerationAssetEntry",
+      "route": "assets/generation-asset",
+      "icon": "x-fa fa-industry",
+      "params": [
+        {
+          "name": "id",
+          "required": true,
+          "description": "record id, or 'new'"
+        }
+      ],
+      "requiredPermissions": [
+        "assets.view"
+      ],
+      "actionPermissions": {
+        "create": "assets.edit",
+        "delete": "assets.delete",
+        "update": "assets.edit"
+      },
+      "config": {
+        "generatedBy": "ui-forge"
+      }
+    },
+    {
+      "id": "assets.generation-assets",
+      "title": "Generation Assets",
+      "type": "summary",
+      "key": "GenerationAssetSummary",
+      "route": "assets/generation-assets",
+      "icon": "x-fa fa-solar-panel",
+      "requiredPermissions": [
+        "assets.view"
+      ],
+      "actionPermissions": {
+        "create": "assets.edit",
+        "delete": "assets.delete",
+        "update": "assets.edit"
+      },
+      "config": {
+        "generatedBy": "ui-forge"
+      }
+    }
+  ],
+  "menus": [
+    {
+      "id": "assets",
+      "title": "Assets",
+      "icon": "x-fa fa-solar-panel",
+      "sortOrder": 55
+    },
+    {
+      "id": "assets.asset-outages",
+      "title": "Asset Outages",
+      "parent": "assets",
+      "display": "assets.asset-outages",
+      "icon": "x-fa fa-plug",
+      "sortOrder": 30
+    },
+    {
+      "id": "assets.new-asset",
+      "title": "New Generation Asset",
+      "parent": "assets",
+      "display": "assets.generation-asset",
+      "icon": "x-fa fa-plus",
+      "sortOrder": 20,
+      "params": {
+        "id": "new"
+      },
+      "requiredPermissions": [
+        "assets.edit"
+      ]
+    },
+    {
+      "id": "assets.generation-assets",
+      "title": "Generation Assets",
+      "parent": "assets",
+      "display": "assets.generation-assets",
+      "icon": "x-fa fa-industry",
+      "sortOrder": 10
+    }
+  ]
+}
