@@ -10,4 +10,7 @@ export const appConfig: AppConfig = {
   apiBase: import.meta.env.VITE_API_BASE || '/api',
   registryBase: import.meta.env.VITE_REGISTRY_BASE || '/registry/api/v1',
   home: 'dashboard',
+  // The hosted API scales to zero when idle and needs 20-40 s to wake (plus the portfolio proxy's hop): wait for it
+  // instead of failing the first sign-in after a quiet period at the default 30 s.
+  timeoutMs: 90_000,
 };
